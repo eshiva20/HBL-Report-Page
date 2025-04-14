@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Report Page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        src="./assets/hbl-logo.png"
+        alt="Health Biotech Logo"
+        class="hbl-logo"
+      />
+      <div class="user-info-container">
+        <img src="./assets/avatar.png" alt="User Image" class="user-img" />
+        <div class="user-info">
+          <h2>Hi Varunn</h2>
+          <p>Sales Person</p>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical more-icon"></i>
+      </div>
+    </nav>
+    <div class="nav-items">
+      <ul>
+        <li>
+          <img src="./assets/icons/home.png" alt="home" class="home-icon" />
+          Home
+        </li>
+        <li>
+          <img src="./assets/icons/home.png" alt="home" class="home-icon" />
+          Leads
+        </li>
+        <li>
+          <img src="./assets/icons/home.png" alt="home" class="home-icon" />
+          Orders
+        </li>
+        <li>
+          <img src="./assets/icons/home.png" alt="home" class="home-icon" />
+          Sales vs Revenue
+        </li>
+        <li>
+          <img src="./assets/icons/home.png" alt="home" class="home-icon" />
+          Customer and Product
+        </li>
+      </ul>
+    </div>
+    <section class="report-dashboard">
+      <div class="title-cover">
+        <h1 class="title">Report Dashboard</h1>
+        <div class="searchbar">
+          <input type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+      </div>
+      <div class="report-dashboard-container">
+        <div class="filter-containers">
+          <div class="selection-filters">
+            <div class="selection-div">
+              <label for="sales-person">Sales Person</label>
+              <select name="sales-person" id="sales-person">
+                <option value="all">All</option>
+              </select>
+            </div>
+            <div class="selection-div">
+              <label for="monthly">Monthly</label>
+              <select name="monthly" id="monthly">
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+              </select>
+            </div>
+            <div class="selection-div">
+              <label class="">Date</label>
+              <div class="custom-date-wrapper">
+                <input
+                  class="date_input"
+                  type="text"
+                  id="datetime-picker"
+                  placeholder="Select Date Range"
+                />
+                <i class="fas fa-calendar-alt calendar-icon"></i>
+              </div>
+              <div class="dates_selected" style="display: none">
+                <span class="dates_display"></span>
+                <button class="clear_all">Clear all</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-filters">
+            <button class="filter-btn">Domestic</button>
+            <button class="filter-btn active">Export</button>
+            <button class="filter-btn">Institution sale</button>
+          </div>
+        </div>
+        <div class="announcement">
+          <img
+            src="./assets/icons/megaphone.png"
+            alt="megaphone"
+            class="megaphone-icon"
+          />
+          <div class="announcement-content">
+            <h2>Announcement</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="collection-report">
+      <div class="title-cover">
+        <h1 class="title">Collection Report</h1>
+      </div>
+    </section> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
