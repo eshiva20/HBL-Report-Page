@@ -128,7 +128,8 @@ p {
         outline: none;
       }
       .search-icon {
-        color: #c4cacd;
+        width: 14px;
+        height: auto;
       }
     }
   }
@@ -552,5 +553,51 @@ p {
         }
       }
     }
+  }
+}
+
+.products {
+  background: #fff;
+  width: 95%;
+  padding-bottom: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  .title-cover {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      color: #000000;
+      font-size: 24px;
+    }
+    .searchbar {
+      border: 1.3px solid #c4cacd45;
+      background: #f6f6f6;
+      padding: 7px 10px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      .search-icon {
+        width: 14px;
+        height: auto;
+      }
+    }
+  }
+  .all-products {
+    border-radius: 8px;
+    margin: 10px 20px;
+    border: 1px solid #b6b6b6;
+    padding: 15px;
   }
 }
