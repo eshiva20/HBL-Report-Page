@@ -434,4 +434,118 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   renderProducts();
+
+  // customers
+
+  const allCustomers = [
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+  ];
+
+  const allCustomersList = document.getElementById("all-customers");
+  allCustomersList.innerHTML = allCustomers
+    .map(
+      (customer, id) => `<div style="
+        border:${
+          allCustomers.length === id + 1 ? "none" : ""
+        }" class="single-customer">
+      <div class="rank">
+        <p>Rank</p>
+        <h1>${id + 1}</h1>
+      </div>
+      <div class="customer">
+        <div class="customer-detail">
+          <div>
+            <span>Customer Name</span>
+            <p class="customer-name">${customer.customerName}</p>
+          </div>
+          <div class="most-buying-lists">
+           <label>Most Buying</label>
+           ${customer.mostBuying.map((item) => `<span>${item}</span>`)},...
+           <button class="view-detail-btn">View Detail</button>
+          </div>
+        </div>
+        <div class="revenue-sales">
+          <div class="revenue">
+            <p>Revenue- ${customer.revenueAmt}</p>
+            <div class="border-line"></div>
+            <span>${customer.revenueCount} k</span>
+          </div>
+          <div class="sales">
+            <p>Sales Person</p>
+            <span>${customer.salePersonName}</span>
+          </div>
+        </div>
+      </div>
+    </div>`
+    )
+    .join("");
 });

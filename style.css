@@ -731,3 +731,228 @@ p {
     }
   }
 }
+
+.customers {
+  background: #fff;
+  width: 95%;
+  padding-bottom: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  text-align: center;
+  .title-cover {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      color: #000000;
+      font-size: 24px;
+    }
+    .searchbar {
+      border: 1.3px solid #c4cacd45;
+      background: #f6f6f6;
+      padding: 7px 10px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      .search-icon {
+        width: 14px;
+        height: auto;
+      }
+    }
+  }
+
+  .all-customers {
+    border-radius: 8px;
+    margin: 10px 20px;
+    border: 1px solid #b6b6b6;
+    padding: 15px;
+    display: grid;
+    gap: 20px;
+
+    .single-customer {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 5px 0px 15px 0px;
+      border-bottom: 1px solid #d9d9d9;
+
+      .rank {
+        text-align: center;
+        p {
+          color: #9b9b9b;
+          font-weight: 400;
+          font-size: 12px;
+        }
+        h1 {
+          color: #20313a;
+          font-weight: 700;
+          font-size: 34px;
+        }
+      }
+      .customer {
+        width: 100%;
+        .customer-detail {
+          display: flex;
+          align-items: center;
+          span {
+            color: #525252;
+            font-size: 12px;
+            font-weight: 400;
+            display: flex;
+          }
+          .customer-name {
+            color: #303030;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .most-buying-lists {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            margin-left: auto;
+            border: 1px solid #dcdcdc;
+            padding: 5px;
+            border-radius: 5px;
+
+            label {
+              background: #c8eaff;
+              font-weight: 700;
+              color: #20313a;
+              font-size: 14px;
+              padding: 6px 9px;
+              border-radius: 3px;
+              margin-right: 7px;
+            }
+
+            span {
+              color: #303030;
+              font-weight: 600;
+              font-size: 15px;
+            }
+
+            .view-detail-btn {
+              background: #587cec;
+              color: #fff;
+              padding: 7px 15px;
+              border-radius: 5px;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              font-family: "Inter", sans-serif;
+              font-size: 15px;
+              margin-left: 15px;
+            }
+          }
+        }
+        .revenue-sales {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 15px;
+          gap: 20px;
+
+          .sales,
+          .revenue {
+            border: 1px solid #dcdcdc;
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            p {
+              color: #20313a;
+              background: #ffecd1;
+              border-radius: 5px;
+              padding: 7px 10px;
+              font-size: 14px;
+              font-weight: 600;
+              white-space: nowrap;
+            }
+            .border-line {
+              height: 10px;
+              border-radius: 3px;
+              width: 100%;
+              background: #ff9500;
+            }
+            span {
+              white-space: nowrap;
+              color: #303030;
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+
+          .revenue {
+            width: 70%;
+          }
+
+          .sales {
+            width: 30%;
+            span {
+              font-size: 18px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #535759;
+    font-size: 14px;
+
+    .pages {
+      display: flex;
+      gap: 0px;
+      align-items: center;
+      span {
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+          color: #1b2124;
+        }
+      }
+      .active-page {
+        background: #587cec;
+        color: #fff;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+        &:hover {
+          color: #1b2124;
+        }
+      }
+      .prev {
+        margin-right: 15px;
+      }
+      .next {
+        margin-left: 15px;
+      }
+    }
+  }
+}
