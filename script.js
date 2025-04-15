@@ -169,4 +169,65 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   renderCards("Yesterday");
+
+  // Monthly Sales Graph
+
+  const monthlyData = {
+    January: [115, 145, 110, 100, 90, 80, 105],
+    February: [105, 135, 100, 90, 80, 70, 95],
+    March: [100, 130, 95, 85, 75, 65, 90],
+    April: [115, 145, 110, 100, 90, 80, 105],
+    May: [90, 120, 85, 75, 65, 55, 80],
+    June: [95, 125, 90, 80, 70, 60, 85],
+    July: [100, 130, 95, 85, 75, 65, 90],
+    August: [102, 132, 98, 88, 78, 68, 92],
+    September: [98, 120, 88, 78, 68, 58, 85],
+    October: [105, 135, 100, 90, 80, 70, 95],
+    November: [110, 140, 105, 95, 85, 75, 100],
+    December: [115, 145, 110, 100, 90, 80, 105],
+  };
+
+  const barGradients = [
+    "linear-gradient(179.23deg, #587CEC -16.04%, #82C7F2 99.33%)",
+    "linear-gradient(178.98deg, #FF4D50 -14.94%, #FFBCBD 127.73%)",
+    "linear-gradient(179.33deg, #A8B346 -19.27%, #DEEF81 99.42%)",
+    "linear-gradient(178.66deg, #F8C333 -36.3%, #DD932E 98.86%)",
+    "linear-gradient(180deg, #FF9500 0%, #FFBD62 100%)",
+    "linear-gradient(178.76deg, #21C292 -17.83%, #9CFEE3 122.86%)",
+    "linear-gradient(179.52deg, #64728A -9.73%, #AFAFAF 111.38%)",
+  ];
+
+  const slider = document.getElementById("monthly-slider");
+
+  function createCards() {
+    slider.innerHTML = "";
+    Object.entries(monthlyData).forEach(([month, values]) => {
+      const card = document.createElement("div");
+      card.className = "month-card";
+
+      const barsHtml = values
+        .map(
+          (height, index) =>
+            `<div class="bar" style="height: ${height}px; background: ${barGradients[index]}"></div>`
+        )
+        .join("");
+
+      card.innerHTML = `
+        <div class="bar-chart">${barsHtml}</div>
+        <div class="month-name">${month}</div>
+      `;
+      slider.appendChild(card);
+    });
+  }
+
+  createCards();
+
+  const scrollAmount = 315;
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+  document.querySelector(".next").addEventListener("click", () => {
+    slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
 });

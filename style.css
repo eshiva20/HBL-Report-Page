@@ -337,3 +337,121 @@ p {
     }
   }
 }
+
+.monthly-sales {
+  background: #fff;
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  .title-cover {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .title {
+      color: #20313a;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .graph-date-range {
+      background: #e1f4ff;
+      color: #3c6da6;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 7px 10px;
+      border-radius: 50px;
+    }
+    .calendar-icon {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  .slider-container {
+    /* width: 1060px; */
+    width: 95%;
+    margin: auto;
+    position: relative;
+
+    .slider {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding-top: 10px;
+      padding-bottom: 20px;
+
+      .month-card {
+        /* flex: 0 0 300px; */
+        flex: 0 0 28.5%;
+        scroll-snap-align: start;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #dbdbdb;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        .bar-chart {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          margin-bottom: 10px;
+          gap: 8px;
+
+          .bar {
+            width: 15px;
+            border-radius: 5px;
+            transition: height 0.3s ease;
+          }
+        }
+
+        .month-name {
+          font-weight: 600;
+          background: #e6f1ff;
+          color: #2d3aac;
+          padding: 5px 10px;
+          border-radius: 15px;
+          display: inline-block;
+          font-size: 14px;
+          width: fit-content;
+          margin: 0px auto;
+        }
+      }
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+    .nav {
+      border: none;
+      background: #ededed;
+      border-radius: 50%;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 18px;
+      position: relative;
+      z-index: 10;
+      .arrow-icon {
+        color: #303030;
+        font-size: 18px;
+      }
+    }
+    .prev {
+      position: absolute;
+      bottom: 45%;
+      left: 0px;
+      transform: translate(-50%, 0px);
+    }
+    .next {
+      position: absolute;
+      bottom: 45%;
+      right: -25px;
+      transform: translate(-50%, 0px);
+    }
+  }
+}
