@@ -316,4 +316,122 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`
     )
     .join("");
+
+  // products
+
+  const products = [
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+    {
+      productName: "Paracetamol",
+      unitSold: "5,000",
+      unitCount: "2436",
+      revenue: "2,50,000",
+      revenueCount: "2436",
+    },
+  ];
+
+  const allProductsList = document.getElementById("all-products");
+  const viewMoreBtn = document.querySelector(".view-more-products-btn");
+
+  let showAll = false;
+
+  function renderProducts() {
+    const visibleProducts = showAll ? products : products.slice(0, 5);
+    allProductsList.innerHTML = visibleProducts
+      .map(
+        (product, id) => `<div style="
+            border:${
+              visibleProducts.length === id + 1 ? "none" : ""
+            }" class="single-product">
+          <div class="rank">
+            <p>Rank</p>
+            <h1>${id + 1}</h1>
+          </div>
+          <div class="product">
+            <div class="product-detail">
+              <div>
+                <span>Product Name</span>
+                <p class="product-name">${product.productName}</p>
+              </div>
+              <button class="view-detail-btn">View Detail</button>
+            </div>
+            <div class="unit-revenue">
+              <div class="unit">
+                <p>Unit Sold- ${product.unitSold}</p>
+                <div class="border-line"></div>
+                <span>${product.unitCount} K</span>
+              </div>
+              <div class="revenue">
+                <p>Revenue- ${product.revenue}</p>
+                <div class="border-line"></div>
+                <span>${product.revenueCount} k</span>
+              </div>
+            </div>
+          </div>
+        </div>`
+      )
+      .join("");
+
+    viewMoreBtn.querySelector("p").textContent = showAll
+      ? "Show Less"
+      : "View More";
+    viewMoreBtn.querySelector("i").classList.toggle("fa-chevron-up", showAll);
+    viewMoreBtn
+      .querySelector("i")
+      .classList.toggle("fa-chevron-down", !showAll);
+  }
+  viewMoreBtn.addEventListener("click", () => {
+    showAll = !showAll;
+    renderProducts();
+  });
+
+  renderProducts();
 });

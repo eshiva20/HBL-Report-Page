@@ -563,6 +563,7 @@ p {
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  text-align: center;
   .title-cover {
     padding: 15px 20px;
     display: flex;
@@ -599,5 +600,134 @@ p {
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
+    display: grid;
+    gap: 20px;
+
+    .single-product {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 5px 0px 15px 0px;
+      border-bottom: 1px solid #d9d9d9;
+
+      .rank {
+        text-align: center;
+        p {
+          color: #9b9b9b;
+          font-weight: 400;
+          font-size: 12px;
+        }
+        h1 {
+          color: #20313a;
+          font-weight: 700;
+          font-size: 34px;
+        }
+      }
+      .product {
+        width: 100%;
+        .product-detail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            color: #525252;
+            font-size: 12px;
+            font-weight: 400;
+            display: flex;
+          }
+          .product-name {
+            color: #303030;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .view-detail-btn {
+            background: #587cec;
+            color: #fff;
+            padding: 7px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+          }
+        }
+        .unit-revenue {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 10px;
+          gap: 30px;
+
+          .unit,
+          .revenue {
+            border: 1px solid #dcdcdc;
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            p {
+              color: #20313a;
+              border-radius: 5px;
+              padding: 7px 10px;
+              font-size: 14px;
+              font-weight: 600;
+              white-space: nowrap;
+            }
+            .border-line {
+              height: 10px;
+              border-radius: 3px;
+              width: 100%;
+            }
+            span {
+              white-space: nowrap;
+              color: #303030;
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+
+          .unit {
+            p {
+              background: #c8eaff;
+            }
+
+            .border-line {
+              background: #2976a8;
+            }
+          }
+
+          .revenue {
+            p {
+              background: #ffecd1;
+            }
+
+            .border-line {
+              background: #ff9500;
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-more-products-btn {
+    background: none;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    color: #535759;
+    &:hover {
+      color: #000000;
+    }
+    .down-icon {
+      color: #000000;
+      font-size: 14px;
+    }
   }
 }
