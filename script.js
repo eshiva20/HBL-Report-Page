@@ -442,6 +442,34 @@ document.addEventListener("DOMContentLoaded", function () {
       customerName: "Sunpharma pvt. ltd.",
       revenueAmt: "2,50,000",
       revenueCount: "2436",
+      mostBuying: [
+        "Paracetmol",
+        "Crocin",
+        "Product",
+        "Paracetmol",
+        "Crocin",
+        "Product",
+      ],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: [
+        "Paracetmol",
+        "Crocin",
+        "Product",
+        "Paracetmol",
+        "Crocin",
+        "Product",
+      ],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
       mostBuying: ["Paracetmol", "Crocin", "Product"],
       salePersonName: "Manish Kumar",
     },
@@ -450,6 +478,160 @@ document.addEventListener("DOMContentLoaded", function () {
       revenueAmt: "2,50,000",
       revenueCount: "2436",
       mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: [
+        "Paracetmol",
+        "Crocin",
+        "Product",
+        "Paracetmol",
+        "Crocin",
+        "Product",
+      ],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: [
+        "Paracetmol",
+        "Crocin",
+        "Product",
+        "Paracetmol",
+        "Crocin",
+        "Product",
+      ],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: ["Paracetmol", "Crocin", "Product"],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: [
+        "Paracetmol",
+        "Crocin",
+        "Product",
+        "Paracetmol",
+        "Crocin",
+        "Product",
+      ],
+      salePersonName: "Manish Kumar",
+    },
+    {
+      customerName: "Sunpharma pvt. ltd.",
+      revenueAmt: "2,50,000",
+      revenueCount: "2436",
+      mostBuying: [
+        "Paracetmol",
+        "Crocin",
+        "Product",
+        "Paracetmol",
+        "Crocin",
+        "Product",
+      ],
       salePersonName: "Manish Kumar",
     },
     {
@@ -511,41 +693,128 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const allCustomersList = document.getElementById("all-customers");
-  allCustomersList.innerHTML = allCustomers
-    .map(
-      (customer, id) => `<div style="
-        border:${
-          allCustomers.length === id + 1 ? "none" : ""
-        }" class="single-customer">
-      <div class="rank">
-        <p>Rank</p>
-        <h1>${id + 1}</h1>
-      </div>
-      <div class="customer">
-        <div class="customer-detail">
-          <div>
-            <span>Customer Name</span>
-            <p class="customer-name">${customer.customerName}</p>
+  const paginationWrapper = document.querySelector(".pagination");
+  const pageDisplay = paginationWrapper.querySelector("p");
+  const pageContainer = paginationWrapper.querySelector(".pages");
+
+  const customersPerPage = 10;
+  let currentPage = 1;
+
+  function renderCustomers() {
+    const startIndex = (currentPage - 1) * customersPerPage;
+    const endIndex = startIndex + customersPerPage;
+    const visibleCustomers = allCustomers.slice(startIndex, endIndex);
+
+    allCustomersList.innerHTML = visibleCustomers
+      .map(
+        (customer, idx) => `
+      <div class="single-customer">
+        <div class="rank">
+          <p>Rank</p>
+          <h1>${startIndex + idx + 1}</h1>
+        </div>
+        <div class="customer">
+          <div class="customer-detail">
+            <div>
+              <span>Customer Name</span>
+              <p class="customer-name">${customer.customerName}</p>
+            </div>
+            <div class="most-buying-lists">
+              <label>Most Buying</label>
+              <span>
+                ${customer.mostBuying.slice(0, 3).join(", ")}${
+          customer.mostBuying.length > 3 ? ", ..." : ""
+        }
+              </span>
+              <button class="view-detail-btn">View All</button>
+            </div>
           </div>
-          <div class="most-buying-lists">
-           <label>Most Buying</label>
-           ${customer.mostBuying.map((item) => `<span>${item}</span>`)},...
-           <button class="view-detail-btn">View Detail</button>
+          <div class="revenue-sales">
+            <div class="revenue">
+              <p>Revenue- ${customer.revenueAmt}</p>
+              <div class="border-line"></div>
+              <span>${customer.revenueCount} k</span>
+            </div>
+            <div class="sales">
+              <p>Sales Person</p>
+              <span>${customer.salePersonName}</span>
+            </div>
           </div>
         </div>
-        <div class="revenue-sales">
-          <div class="revenue">
-            <p>Revenue- ${customer.revenueAmt}</p>
-            <div class="border-line"></div>
-            <span>${customer.revenueCount} k</span>
-          </div>
-          <div class="sales">
-            <p>Sales Person</p>
-            <span>${customer.salePersonName}</span>
-          </div>
-        </div>
-      </div>
-    </div>`
-    )
-    .join("");
+      </div>`
+      )
+      .join("");
+
+    pageDisplay.textContent = `Showing ${startIndex + 1}-${Math.min(
+      endIndex,
+      allCustomers.length
+    )} of ${allCustomers.length}`;
+
+    renderPagination(
+      Math.ceil(allCustomers.length / customersPerPage),
+      currentPage
+    );
+  }
+
+  function renderPagination(totalPages, currentPage) {
+    let pagesHTML = "";
+
+    pagesHTML += `<span class="arrow ${
+      currentPage === 1 ? "disabled" : ""
+    }" data-page="${
+      currentPage - 1
+    }"> <i class="fa-solid fa-angles-left prev"></i></span>`;
+
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        pagesHTML += getPageHTML(i, currentPage);
+      }
+    } else {
+      pagesHTML += getPageHTML(1, currentPage);
+      pagesHTML += getPageHTML(2, currentPage);
+
+      if (currentPage > 4) {
+        pagesHTML += `<span class="dots">...</span>`;
+      }
+
+      if (currentPage > 2 && currentPage < totalPages - 1) {
+        pagesHTML += getPageHTML(currentPage, currentPage);
+      }
+
+      if (currentPage < totalPages - 3) {
+        pagesHTML += `<span class="dots">...</span>`;
+      }
+
+      pagesHTML += getPageHTML(totalPages - 1, currentPage);
+      pagesHTML += getPageHTML(totalPages, currentPage);
+    }
+
+    pagesHTML += `<span class="arrow ${
+      currentPage === totalPages ? "disabled" : ""
+    }" data-page="${
+      currentPage + 1
+    }"> <i class="fa-solid fa-angles-right next"></i></span>`;
+
+    pageContainer.innerHTML = pagesHTML;
+  }
+
+  function getPageHTML(page, currentPage) {
+    return `<span class="${
+      page === currentPage ? "active-page" : ""
+    }" data-page="${page}">${page}</span>`;
+  }
+
+  pageContainer.addEventListener("click", (e) => {
+    if (e.target.dataset.page) {
+      currentPage = parseInt(e.target.dataset.page);
+      renderCustomers();
+
+      // window.scrollTo({ top: 0, behavior: "smooth" }); // Optional: scroll to top
+      document
+        .getElementById("customers")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  renderCustomers();
 });
