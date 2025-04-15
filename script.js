@@ -74,74 +74,99 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Collection report Cards
-  const reports = [
+  const reportBase = [
     {
+      key: "contract",
       reportName: "Contract Mfg.",
-      amount: "₹ 3,00,000",
-      style: {
-        color: "#1E508D",
-        background: "#E6F1FF",
-      },
+      style: { color: "#1E508D", background: "#E6F1FF" },
     },
     {
+      key: "directGovt",
       reportName: "Direct Govt. Inst.",
-      amount: "₹ 4,00,000",
-      style: {
-        color: "#FF3A6F",
-        background: "#FFEBE3",
-      },
+      style: { color: "#FF3A6F", background: "#FFEBE3" },
     },
     {
+      key: "indirectGovt",
       reportName: "Indirect Govt. Inst.",
-      amount: "₹ 5,00,000",
-      style: {
-        color: "#A7B817",
-        background: "#FAFFCF",
-      },
+      style: { color: "#A7B817", background: "#FAFFCF" },
     },
     {
+      key: "pcd",
       reportName: "PCD Sales",
-      amount: "₹ 6,00,000",
-      style: {
-        color: "#FF9504",
-        background: "#FFEDD3",
-      },
+      style: { color: "#FF9504", background: "#FFEDD3" },
     },
     {
+      key: "ethical",
       reportName: "Ethical Sales",
-      amount: "₹ 7,00,000",
-      style: {
-        color: "#F6D913",
-        background: "#FFFCE7",
-      },
+      style: { color: "#F6D913", background: "#FFFCE7" },
     },
     {
+      key: "directExport",
       reportName: "Direct Export",
-      amount: "₹ 8,00,000",
-      style: {
-        color: "#0BB1B7",
-        background: "#D9FEFF",
-      },
+      style: { color: "#0BB1B7", background: "#D9FEFF" },
     },
     {
+      key: "deemedExport",
       reportName: "Deemed Export",
-      amount: "₹ 9,00,000",
-      style: {
-        color: "#556179",
-        background: "#E9E9E9",
-      },
+      style: { color: "#556179", background: "#E9E9E9" },
     },
   ];
 
-  const allCards = document.getElementById("all-cards");
-  allCards.innerHTML = reports
-    .map(
-      (
-        report
-      ) => `<div style="background-color: ${report.style.background}" style class="report-card">
-      <p style="border-bottom: 2px solid ${report.style.color}">${report.reportName}</p>
-      <h2>${report.amount}</h2>
-    </div>`
-    )
-    .join("");
+  const reportAmounts = {
+    Yesterday: {
+      contract: "₹ 1,00,000",
+      directGovt: "₹ 1,50,000",
+      indirectGovt: "₹ 2,00,000",
+      pcd: "₹ 2,50,000",
+      ethical: "₹ 3,00,000",
+      directExport: "₹ 3,50,000",
+      deemedExport: "₹ 4,00,000",
+    },
+    Weekly: {
+      contract: "₹ 5,00,000",
+      directGovt: "₹ 5,50,000",
+      indirectGovt: "₹ 6,00,000",
+      pcd: "₹ 6,50,000",
+      ethical: "₹ 7,00,000",
+      directExport: "₹ 7,50,000",
+      deemedExport: "₹ 8,00,000",
+    },
+    Monthly: {
+      contract: "₹ 10,00,000",
+      directGovt: "₹ 11,00,000",
+      indirectGovt: "₹ 12,00,000",
+      pcd: "₹ 13,00,000",
+      ethical: "₹ 14,00,000",
+      directExport: "₹ 15,00,000",
+      deemedExport: "₹ 16,00,000",
+    },
+  };
+
+  function renderCards(filter) {
+    const allCards = document.getElementById("all-cards");
+    allCards.innerHTML = reportBase
+      .map((report) => {
+        const amount = reportAmounts[filter][report.key];
+        return `
+          <div class="report-card" style="background-color: ${report.style.background}">
+            <p style="border-bottom: 2px solid ${report.style.color}">${report.reportName}</p>
+            <h2>${amount}</h2>
+          </div>`;
+      })
+      .join("");
+  }
+
+  const buttons = document.querySelectorAll(".day-btn");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const selected = button.textContent.trim();
+      renderCards(selected);
+    });
+  });
+
+  renderCards("Yesterday");
 });
