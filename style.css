@@ -308,6 +308,7 @@ p {
     .calendar-icon {
       color: #000000;
       margin-left: auto;
+      cursor: pointer;
     }
   }
   .all-cards {
@@ -315,5 +316,24 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
+    .report-card {
+      padding: 10px;
+      border-radius: 8px;
+      width: 100%;
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 5px;
+        color: #20313a;
+      }
+      h2 {
+        font-weight: 700;
+        color: #000000;
+        font-size: 17px;
+        padding-top: 5px;
+      }
+    }
   }
 }
