@@ -230,4 +230,90 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".next").addEventListener("click", () => {
     slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
   });
+
+  // Sales vs target
+  const saleVsTarget = [
+    {
+      name: "Contract Mfg.",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "linear-gradient(179.23deg, #587CEC -16.04%, #82C7F2 99.33%);",
+        background: "#E6F1FF",
+      },
+    },
+    {
+      name: "Direct Govt. Inst.",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "linear-gradient(178.98deg, #FF4D50 -14.94%, #FFBCBD 127.73%);",
+        background: "#FFEBE3",
+      },
+    },
+    {
+      name: "Indirect Govt. Inst.",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "linear-gradient(179.33deg, #A8B346 -19.27%, #DEEF81 99.42%);",
+        background: "#FAFFCF",
+      },
+    },
+    {
+      name: "PCD Sales",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "linear-gradient(178.66deg, #F8C333 -36.3%, #DD932E 98.86%);",
+        background: "#FFEDD3",
+      },
+    },
+    {
+      name: "Ethical Sales",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "var(--Colors-Orange, #FF9500);",
+        background: "#FFFCE7",
+      },
+    },
+    {
+      name: "Direct Export",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "linear-gradient(178.76deg, #21C292 -17.83%, #1E9497 122.86%);",
+        background: "#D9FEFF",
+      },
+    },
+    {
+      name: "Deemed Export",
+      achieveAmt: "₹1,00,00,000",
+      targetAmt: "₹2,00,00,000",
+      style: {
+        color: "linear-gradient(179.52deg, #64728A -9.73%, #676A70 111.38%);",
+        background: "#E9E9E9",
+      },
+    },
+  ];
+
+  const cardsContainer = document.getElementById("cards-container");
+  cardsContainer.innerHTML = saleVsTarget
+    .map(
+      (item) => `<div style="
+            background:${item.style.background}"  class="sales-vs-target-card">
+            <h4>${item?.name}</h4>
+            <div class="labels">
+              <span>Achieve</span>
+              <span>Target</span>
+            </div>
+            <div style="background: ${item.style.color}" class="border-line"></div>
+            <div class="amts">
+              <span>${item.achieveAmt}</span>
+              <span>${item.targetAmt}</span>
+            </div>
+            </div>`
+    )
+    .join("");
 });
