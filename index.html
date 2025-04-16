@@ -18,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Report Page</title>
   </head>
   <body>
@@ -198,8 +199,37 @@
       </div>
       <div id="all-customers" class="all-customers"></div>
       <div class="pagination">
-        <p>Showing result of 400</p>
+        <p></p>
         <div class="pages"></div>
+      </div>
+    </section>
+
+    <section class="leads-tradewise">
+      <div class="leads-graph-container">
+        <ul>
+          <li class="lead-label active">Total Leads</li>
+          <li class="lead-label">New Leads</li>
+          <li class="lead-label">Converted</li>
+          <li class="lead-label">Existing Leads</li>
+          <li class="lead-label">Follow Ups</li>
+          <li class="lead-label">Whatsapp</li>
+          <li class="lead-label">Email</li>
+          <li class="lead-label">Not Converted</li>
+        </ul>
+        <div class="chart-container">
+          <div class="chart-header">
+            <span class="date-range">Jan,2024–Dec,2024</span>
+            <a class="view-list"
+              >View List <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="chart">
+            <canvas id="monthlyChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="tradewise-distribution">
+        <h2 class="title">Trade Wise Distribution</h2>
       </div>
     </section>
 

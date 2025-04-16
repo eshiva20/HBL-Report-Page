@@ -808,8 +808,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target.dataset.page) {
       currentPage = parseInt(e.target.dataset.page);
       renderCustomers();
-
-      // window.scrollTo({ top: 0, behavior: "smooth" }); // Optional: scroll to top
       document
         .getElementById("customers")
         .scrollIntoView({ behavior: "smooth" });
@@ -817,4 +815,72 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   renderCustomers();
+
+  //Leads and Tradewise Distribution
+
+  const ctx = document.getElementById("monthlyChart").getContext("2d");
+
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "April",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+      datasets: [
+        {
+          label: "Monthly Sales",
+          data: [90, 40, 80, 60, 70, 25, 65, 50, 75, 55, 85, 45],
+          backgroundColor: "#344BFD",
+          borderRadius: {
+            topLeft: 10,
+            topRight: 10,
+          },
+          barThickness: 15,
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          border: { display: false },
+          ticks: {
+            color: "#333",
+            font: {
+              size: 13,
+              weight: "500",
+            },
+          },
+        },
+        y: {
+          display: false,
+          grid: { display: false },
+        },
+      },
+    },
+  });
+
+  const leadBtns = document.querySelectorAll(".lead-label");
+  leadBtns.forEach((li) => {
+    li.addEventListener("click", () => {
+      leadBtns.forEach((item) => item.classList.remove("active"));
+      li.classList.add("active");
+    });
+  });
 });

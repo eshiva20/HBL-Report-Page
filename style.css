@@ -956,3 +956,107 @@ p {
     }
   }
 }
+
+.leads-tradewise {
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  .leads-graph-container {
+    width: 70%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 15px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      padding-left: 0px;
+      border-bottom: 1px solid #d9d9d9;
+
+      .lead-label {
+        color: #5d4c4c;
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: #413535;
+        }
+      }
+      .active {
+        color: #2d3aac;
+        font-weight: 600;
+        border-bottom: 2px solid #2d3aac;
+        padding-bottom: 10px;
+
+        &:hover {
+          color: #2d3aac;
+        }
+      }
+    }
+
+    .chart-container {
+      background: #eff9ff;
+      padding: 20px 30px;
+      border-radius: 0px 0px 15px 15px;
+
+      .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+
+        .date-range {
+          background: #fff;
+          color: #3c6da6;
+          padding: 8px 14px;
+          border-radius: 15px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .view-list {
+          color: #587cec;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          cursor: pointer;
+
+          &:hover {
+            color: #2976a8;
+          }
+        }
+      }
+      .chart {
+        padding: 0px 120px;
+      }
+    }
+  }
+
+  .tradewise-distribution {
+    width: 30%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 15px 0px;
+
+    .title {
+      font-weight: 600;
+      color: #00010b;
+      font-size: 16px;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 12px 15px;
+    }
+  }
+}
