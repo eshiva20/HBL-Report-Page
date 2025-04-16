@@ -1123,4 +1123,66 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>`
     )
     .join("");
+
+  //Payment Projection
+
+  const paymentProjectionDetails = [
+    {
+      month: "Jan",
+      projected: "2.1",
+      projectedCount: "30",
+      acheived: "1.1",
+      acheivedCount: "40",
+    },
+    {
+      month: "Feb",
+      projected: "2.1",
+      projectedCount: "30",
+      acheived: "1.1",
+      acheivedCount: "40",
+    },
+    {
+      month: "Mar",
+      projected: "2.1",
+      projectedCount: "30",
+      acheived: "1.1",
+      acheivedCount: "40",
+    },
+    {
+      month: "Apr",
+      projected: "2.1",
+      projectedCount: "30",
+      acheived: "1.1",
+      acheivedCount: "40",
+    },
+  ];
+
+  const listOfMonths = document.getElementById("list-of-months");
+
+  listOfMonths.innerHTML = paymentProjectionDetails
+    .map(
+      (item) => `<div class="month">
+          <div class="current-month">
+            <p>Month</p>
+            <h1>${item.month}</h1>
+          </div>
+          <div class="projection-detail">
+              <div class="projected">
+                <span class="type">Projected</span>
+                <div class="border-line">
+                  <div style="width:${item.projectedCount}%"></div>
+                </div>
+                <span class="count">${item.projected} L</span>
+              </div>
+              <div class="achieved">
+                <span class="type">Achived</span>
+                <div class="border-line">
+                  <div style="width:${item.acheivedCount}%"></div>
+                </div>
+                <span class="count">${item.acheived} L</span>
+              </div>
+          </div>
+      </div>`
+    )
+    .join("");
 });

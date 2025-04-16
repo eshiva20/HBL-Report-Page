@@ -1393,3 +1393,126 @@ p {
     }
   }
 }
+
+.payment-projection {
+  background: #fff;
+  width: 95%;
+  padding-bottom: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  text-align: center;
+  .title-cover {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      color: #20313a;
+      font-size: 22px;
+    }
+  }
+  .list-of-months {
+    border-radius: 8px;
+    margin: 10px 20px;
+    border: 1px solid #b6b6b6;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 30px;
+
+    .month {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .current-month {
+        border: 1px solid #dcdcdc;
+        border-radius: 5px;
+        width: 110px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+          color: #9b9b9b;
+          font-weight: 400;
+          font-size: 10px;
+        }
+        h1 {
+          color: #20313a;
+          font-weight: 700;
+          font-size: 32px;
+          margin-top: 2px;
+        }
+      }
+      .projection-detail {
+        border: 1px solid #dcdcdc;
+        border-radius: 5px;
+        padding: 10px 15px;
+        width: 100%;
+        display: grid;
+        gap: 10px;
+
+        .projected,
+        .achieved {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          .type {
+            color: #20313a;
+            font-weight: 600;
+            border-radius: 5px;
+            font-size: 14px;
+          }
+          .border-line {
+            height: 14px;
+            width: 100%;
+            background: #eeeeee;
+            border-radius: 5px;
+            position: relative;
+            div {
+              position: absolute;
+              height: 100%;
+              border-radius: 5px;
+            }
+          }
+          .count {
+            font-weight: 700;
+            color: #303030;
+            font-size: 18px;
+            white-space: nowrap;
+          }
+        }
+
+        .projected {
+          .type {
+            background: #34c7591a;
+            padding: 5px 30px 5px 10px;
+          }
+          .border-line {
+            div {
+              background: #34c759;
+            }
+          }
+        }
+        .achieved {
+          .type {
+            background: #ffcc001a;
+            padding: 5px 10px;
+          }
+          .border-line {
+            div {
+              background: #ffcc00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
