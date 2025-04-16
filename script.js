@@ -935,4 +935,106 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     }),
   });
+
+  // Order Operational Status
+
+  const orderLists = [
+    {
+      openOrders: "70",
+      departmentName: "Contract Mfg.",
+      lessThan25Days: "20",
+      greaterThan25: "40",
+      greaterThan45: "10",
+    },
+    {
+      openOrders: "55",
+      departmentName: "Direct Govt. Inst.",
+      lessThan25Days: "20",
+      greaterThan25: "25",
+      greaterThan45: "10",
+    },
+    {
+      openOrders: "60",
+      departmentName: "Indirect Govt. Inst.",
+      lessThan25Days: "20",
+      greaterThan25: "30",
+      greaterThan45: "10",
+    },
+    {
+      openOrders: "10",
+      departmentName: "PCD Sales",
+      lessThan25Days: "3",
+      greaterThan25: "5",
+      greaterThan45: "2",
+    },
+    {
+      openOrders: "90",
+      departmentName: "Ethical Sales",
+      lessThan25Days: "30",
+      greaterThan25: "40",
+      greaterThan45: "20",
+    },
+    {
+      openOrders: "100",
+      departmentName: "Direct Export",
+      lessThan25Days: "40",
+      greaterThan25: "40",
+      greaterThan45: "20",
+    },
+    {
+      openOrders: "88",
+      departmentName: "Deemed Export",
+      lessThan25Days: "30",
+      greaterThan25: "40",
+      greaterThan45: "18",
+    },
+  ];
+
+  const allOrdersList = document.getElementById("all-orders");
+
+  allOrdersList.innerHTML = orderLists
+    .map(
+      (order, id) => `<div ${
+        orderLists.length === id + 1 && "style=border:none"
+      }  class="single-order">
+          <div class="open-orders">
+            <p>Open Orders</p>
+            <h1>${order.openOrders}</h1>
+          </div>
+          <div class="order">
+            <span>Department name</span>
+            <p class="department-name">${order.departmentName}</p>
+            <div class="days-count">
+              <div class="lessThan25Days">
+                <span class="days">0-25 days</span>
+                <div class="border-line">
+                  <div style="width:${
+                    (order.lessThan25Days / order.openOrders) * 100
+                  }%"></div>
+                </div>
+                <span class="count">${order.lessThan25Days}</span>
+              </div>
+              <div class="greaterThan25">
+                <span class="days">>25 days</span>
+                <div class="border-line">
+                  <div style="width:${
+                    (order.greaterThan25 / order.openOrders) * 100
+                  }%"></div>
+                </div>
+                <span class="count">${order.greaterThan25}</span>
+              </div>
+              <div class="greaterThan45">
+                <span class="days">>45 days</span>
+                <div class="border-line">
+                  <div style="width:${
+                    (order.greaterThan45 / order.openOrders) * 100
+                  }%"></div>
+                </div>
+                <span class="count">${order.greaterThan45}</span>
+              </div>
+            </div>
+          </div>
+        </div>`
+    )
+    .join("");
 });
