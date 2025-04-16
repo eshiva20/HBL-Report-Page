@@ -504,7 +504,7 @@ p {
     margin: 15px 20px;
     background: #eff9ff;
     padding: 20px;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 12px 12px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -596,7 +596,7 @@ p {
     }
   }
   .all-products {
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
@@ -773,7 +773,7 @@ p {
   }
 
   .all-customers {
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
@@ -1101,7 +1101,7 @@ p {
     }
   }
   .all-orders {
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
@@ -1258,7 +1258,7 @@ p {
     }
   }
   .all-existing-vs-first-time-customers {
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
@@ -1415,7 +1415,7 @@ p {
     }
   }
   .list-of-months {
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
@@ -1513,6 +1513,44 @@ p {
           }
         }
       }
+    }
+  }
+}
+
+.query-remark {
+  background: #fff;
+  width: 95%;
+  padding-bottom: 10px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  text-align: center;
+  .title-cover {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      color: #20313a;
+      font-size: 22px;
+    }
+  }
+  .all-queries {
+    border-radius: 15px;
+    margin: 10px 20px;
+    border: 1px solid #b6b6b6;
+    padding: 15px;
+    display: grid;
+    gap: 20px;
+
+    .single-query {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 5px 0px 15px 0px;
+      border-bottom: 1px solid #d9d9d9;
     }
   }
 }
