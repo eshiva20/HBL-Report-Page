@@ -1185,4 +1185,87 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>`
     )
     .join("");
+
+  //Query Remark
+
+  const queryRemarks = [
+    {
+      number: "45904",
+      date: "Dec 29, 2012",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Dianne Russell",
+      customer: "Jacob Jones",
+      orderValue: "14.81",
+    },
+    {
+      number: "93457",
+      date: "Aug 7, 2017",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Cameron Williamson",
+      customer: "Robert Fox",
+      orderValue: "8.99",
+    },
+    {
+      number: "28200",
+      date: "Nov 28, 2015",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Jenny Wilson",
+      customer: "Esther Howard",
+      orderValue: "17.84",
+    },
+    {
+      number: "13671",
+      date: "Nov 7, 2017",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Courtney Henry",
+      customer: "Devon Lane",
+      orderValue: "11.70",
+    },
+    {
+      number: "50364",
+      date: "May 12, 2019",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Arlene McCoy",
+      customer: "Arlene McCoy",
+      orderValue: "6.48",
+    },
+    {
+      number: "10708",
+      date: "Oct 24, 2018",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Darrell Steward",
+      customer: "Jane Cooper",
+      orderValue: "8.99",
+    },
+    {
+      number: "74875",
+      date: "May 31, 2015",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Savannah Nguyen",
+      customer: "Courtney Henry",
+      orderValue: "5.22",
+    },
+    {
+      number: "23340",
+      date: "Jul 14, 2015",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Theresa Webb",
+      customer: "Darrell Steward",
+      orderValue: "11.70",
+    },
+  ];
+
+  const allQueries = document.getElementById("all-queries");
+
+  // allQueries.innerHTML = queryRemarks
+  //   .map((query) => `<div>Query</div>`)
+  //   .join("");
 });
