@@ -816,11 +816,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderCustomers();
 
-  //Leads and Tradewise Distribution
+  //Leads Graph
 
-  const ctx = document.getElementById("monthlyChart").getContext("2d");
+  const leadsGraph = document.getElementById("monthlyChart").getContext("2d");
 
-  new Chart(ctx, {
+  new Chart(leadsGraph, {
     type: "bar",
     data: {
       labels: [
@@ -882,5 +882,57 @@ document.addEventListener("DOMContentLoaded", function () {
       leadBtns.forEach((item) => item.classList.remove("active"));
       li.classList.add("active");
     });
+  });
+
+  // Trade Wise Distribution
+
+  const tradeWiseDistribution = document
+    .getElementById("tradeWiseDistributionChart")
+    .getContext("2d");
+
+  new Chart(tradeWiseDistribution, {
+    type: "bar",
+    data: {
+      labels: [
+        "Unset",
+        "Domestic",
+        "Export",
+        "Domestic-PCD",
+        "Export Merchant",
+      ],
+      datasets: [
+        {
+          label: "Sales",
+          data: [60, 90, 70, 110, 50],
+          backgroundColor: "#344BFD",
+          borderRadius: {
+            topLeft: 10,
+            topRight: 10,
+          },
+          barThickness: 15,
+        },
+      ],
+    },
+    options: (options = {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: {
+            maxRotation: 45,
+            minRotation: 45,
+          },
+          border: { display: false },
+        },
+        y: {
+          grid: { display: false },
+          border: { display: false },
+          ticks: { display: false },
+        },
+      },
+    }),
   });
 });
