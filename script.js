@@ -387,10 +387,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const visibleProducts = showAll ? products : products.slice(0, 5);
     allProductsList.innerHTML = visibleProducts
       .map(
-        (product, id) => `<div style="
-            border:${
-              visibleProducts.length === id + 1 ? "none" : ""
-            }" class="single-product">
+        (product, id) => `<div ${
+          visibleProducts.length === id + 1 && "style=border:none"
+        } class="single-product">
           <div class="rank">
             <p>Rank</p>
             <h1>${id + 1}</h1>
@@ -708,7 +707,9 @@ document.addEventListener("DOMContentLoaded", function () {
     allCustomersList.innerHTML = visibleCustomers
       .map(
         (customer, idx) => `
-      <div class="single-customer">
+      <div ${
+        visibleCustomers.length === idx + 1 && "style=border:none"
+      } class="single-customer">
         <div class="rank">
           <p>Rank</p>
           <h1>${startIndex + idx + 1}</h1>
@@ -1031,6 +1032,91 @@ document.addEventListener("DOMContentLoaded", function () {
                   }%"></div>
                 </div>
                 <span class="count">${order.greaterThan45}</span>
+              </div>
+            </div>
+          </div>
+        </div>`
+    )
+    .join("");
+
+  // Existing vs First Time Customers
+
+  const allExistingVsFirstTimeCustomers = [
+    {
+      totalOrders: "70",
+      departmentName: "Contract Manufacturing",
+      existingCustomers: "20",
+      newCustomers: "40",
+      newCustomersAdded: "10",
+    },
+    {
+      totalOrders: "70",
+      departmentName: "PCD Sales",
+      existingCustomers: "20",
+      newCustomers: "40",
+      newCustomersAdded: "10",
+    },
+    {
+      totalOrders: "70",
+      departmentName: "Direct Export",
+      existingCustomers: "20",
+      newCustomers: "40",
+      newCustomersAdded: "10",
+    },
+    {
+      totalOrders: "70",
+      departmentName: "Deemed Export",
+      existingCustomers: "20",
+      newCustomers: "40",
+      newCustomersAdded: "10",
+    },
+  ];
+
+  const allExistingVsNewCustomersList = document.getElementById(
+    "all-existing-vs-first-time-customers"
+  );
+
+  allExistingVsNewCustomersList.innerHTML = allExistingVsFirstTimeCustomers
+    .map(
+      (department, id) => `<div ${
+        allExistingVsFirstTimeCustomers.length === id + 1 && "style=border:none"
+      }  class="single-department">
+          <div class="total-orders">
+            <p>Total Orders</p>
+            <h1>${department.totalOrders}</h1>
+          </div>
+          <div class="order">
+            <p class="department-name">${department.departmentName}</p>
+            <span>Department name</span>
+            <div class="customers-count">
+              <div class="existingCustomers">
+                <span class="days">Existing Cust.</span>
+                <div class="border-line">
+                  <div style="width:${
+                    (department.existingCustomers / department.totalOrders) *
+                    100
+                  }%"></div>
+                </div>
+                <span class="count">${department.existingCustomers}</span>
+              </div>
+              <div class="newCustomers">
+                <span class="days">New Cust.</span>
+                <div class="border-line">
+                  <div style="width:${
+                    (department.newCustomers / department.totalOrders) * 100
+                  }%"></div>
+                </div>
+                <span class="count">${department.newCustomers}</span>
+              </div>
+              <div class="newCustomersAdded">
+                <span class="days">New Cust. Added</span>
+                <div class="border-line">
+                  <div style="width:${
+                    (department.newCustomersAdded / department.totalOrders) *
+                    100
+                  }%"></div>
+                </div>
+                <span class="count">${department.newCustomersAdded}</span>
               </div>
             </div>
           </div>
