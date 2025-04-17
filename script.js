@@ -73,6 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".dates_selected").style.display = "none";
   });
 
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((item) => item.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
   // Collection report Cards
   const reportBase = [
     {

@@ -3,6 +3,7 @@ body {
   padding: 0px;
   font-family: "Inter", sans-serif;
   background: #f0f8ff;
+  overflow-x: hidden;
 }
 
 h1,
