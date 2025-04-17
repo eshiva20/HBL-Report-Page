@@ -1537,20 +1537,43 @@ p {
       font-size: 22px;
     }
   }
-  .all-queries {
+  .queries-table {
     border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
     padding: 15px;
-    display: grid;
-    gap: 20px;
+    width: calc(100% - 40px);
 
-    .single-query {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      padding: 5px 0px 15px 0px;
-      border-bottom: 1px solid #d9d9d9;
+    td,
+    th {
+      border-bottom: 1px solid #eeeeee;
+      text-align: left;
+      padding: 12px 8px;
+      font-size: 14px;
+    }
+
+    tr:nth-last-child(1) {
+      td {
+        border: none;
+      }
+    }
+
+    th {
+      font-weight: 700;
+      color: #717171;
+    }
+
+    tbody {
+      color: #292d32;
+      font-weight: 500;
+
+      .sales-agent-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 8px;
+        vertical-align: middle;
+      }
     }
   }
 }

@@ -1265,7 +1265,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const allQueries = document.getElementById("all-queries");
 
-  // allQueries.innerHTML = queryRemarks
-  //   .map((query) => `<div>Query</div>`)
-  //   .join("");
+  allQueries.innerHTML = queryRemarks
+    .map(
+      (query, id) => `
+      <tr>
+        <td>${query.number}</td>
+        <td>${query.date}</td>
+        <td>${query.status}</td>
+        <td>
+          <img src="${query.salesAgentImg}" alt="${query.salesAgentName}" class="sales-agent-img">
+          ${query.salesAgentName}
+        </td>
+        <td>${query.customer}</td>
+        <td>$${query.orderValue}</td>
+      </tr> `
+    )
+    .join("");
 });
