@@ -805,16 +805,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }" data-page="${page}">${page}</span>`;
   }
 
-  // pageContainer.addEventListener("click", (e) => {
-  //   if (e.target.dataset.page) {
-  //     currentPage = parseInt(e.target.dataset.page);
-  //     renderCustomers();
-  //     document
-  //       .getElementById("customers")
-  //       .scrollIntoView({ behavior: "smooth" });
-  //   }
-  // });
-
   pageContainer.addEventListener("click", (e) => {
     const pageEl = e.target.closest("[data-page]");
     if (!pageEl) return;
@@ -1445,7 +1435,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${query.date}</td>
         <td>${query.status}</td>
         <td>
-          <img src="${query.salesAgentImg}" alt="${query.salesAgentName}" class="sales-agent-img">
+          <img src="${query.salesAgentImg}" alt="${query.salesAgentName}" class="avatar">
           ${query.salesAgentName}
         </td>
         <td>${query.customer}</td>
@@ -1513,16 +1503,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }" data-page="${page}">${page}</span>`;
   }
 
-  // queryPageContainer.addEventListener("click", (e) => {
-  //   if (e.target.dataset.page) {
-  //     currentQueryPage = parseInt(e.target.dataset.page);
-  //     renderQueries();
-  //     document
-  //       .getElementById("query-remark")
-  //       .scrollIntoView({ behavior: "smooth" });
-  //   }
-  // });
-
   queryPageContainer.addEventListener("click", (e) => {
     const pageEl = e.target.closest("[data-page]");
     if (!pageEl) return;
@@ -1540,4 +1520,271 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   renderQueries();
+
+  // Added new customers
+
+  const newCustomers = [
+    {
+      name: "Wade Warren",
+      contactNumber: "Dec 29, 2012",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Dianne Russell",
+    },
+    {
+      name: "Arlene McCoy",
+      contactNumber: "Aug 7, 2017",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Cameron Williamson",
+    },
+    {
+      name: "Bessie Cooper",
+      contactNumber: "Nov 28, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Jenny Wilson",
+    },
+    {
+      name: "Ronald Richards",
+      contactNumber: "Nov 7, 2017",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Courtney Henry",
+    },
+    {
+      name: "Courtney Henry",
+      contactNumber: "May 12, 2019",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Arlene McCoy",
+    },
+    {
+      name: "Jenny Wilson",
+      contactNumber: "Oct 24, 2018",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Darrell Steward",
+    },
+    {
+      name: "Leslie Alexander",
+      contactNumber: "May 31, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Savannah Nguyen",
+    },
+    {
+      name: "Marvin McKinney",
+      contactNumber: "Jul 14, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Theresa Webb",
+    },
+    {
+      name: "Wade Warren",
+      contactNumber: "Dec 29, 2012",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Dianne Russell",
+    },
+    {
+      name: "Arlene McCoy",
+      contactNumber: "Aug 7, 2017",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Cameron Williamson",
+    },
+    {
+      name: "Bessie Cooper",
+      contactNumber: "Nov 28, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Jenny Wilson",
+    },
+    {
+      name: "Ronald Richards",
+      contactNumber: "Nov 7, 2017",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Courtney Henry",
+    },
+    {
+      name: "Courtney Henry",
+      contactNumber: "May 12, 2019",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Arlene McCoy",
+    },
+    {
+      name: "Jenny Wilson",
+      contactNumber: "Oct 24, 2018",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Darrell Steward",
+    },
+    {
+      name: "Leslie Alexander",
+      contactNumber: "May 31, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Savannah Nguyen",
+    },
+    {
+      name: "Marvin McKinney",
+      contactNumber: "Jul 14, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Theresa Webb",
+    },
+    {
+      name: "Wade Warren",
+      contactNumber: "Dec 29, 2012",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Dianne Russell",
+    },
+    {
+      name: "Arlene McCoy",
+      contactNumber: "Aug 7, 2017",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Cameron Williamson",
+    },
+    {
+      name: "Bessie Cooper",
+      contactNumber: "Nov 28, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Jenny Wilson",
+    },
+    {
+      name: "Ronald Richards",
+      contactNumber: "Nov 7, 2017",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Courtney Henry",
+    },
+    {
+      name: "Courtney Henry",
+      contactNumber: "May 12, 2019",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Arlene McCoy",
+    },
+    {
+      name: "Jenny Wilson",
+      contactNumber: "Oct 24, 2018",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Darrell Steward",
+    },
+    {
+      name: "Leslie Alexander",
+      contactNumber: "May 31, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Savannah Nguyen",
+    },
+    {
+      name: "Marvin McKinney",
+      contactNumber: "Jul 14, 2015",
+      salesAgentImg: "/assets/sales-agent.png",
+      salesAgentName: "Theresa Webb",
+    },
+  ];
+
+  const allNewCustomers = document.getElementById("all-new-added-customers");
+  const newCustomersPaginationWrapper = document.querySelector(
+    ".new-customers-pagination"
+  );
+  const newCustomersPageDisplay =
+    newCustomersPaginationWrapper.querySelector("p");
+  const newCustomersPageContainer = newCustomersPaginationWrapper.querySelector(
+    ".new-customers-pages"
+  );
+
+  const newCustomersPerPage = 10;
+  let currentNewCustomersPage = 1;
+
+  function renderNewCustomers() {
+    const startIndex = (currentNewCustomersPage - 1) * newCustomersPerPage;
+    const endIndex = startIndex + newCustomersPerPage;
+    const visibleNewCustomers = newCustomers.slice(startIndex, endIndex);
+
+    allNewCustomers.innerHTML = visibleNewCustomers
+      .map(
+        (customer) => `
+      <tr>
+        <td>${customer.name}</td>
+        <td>${customer.contactNumber}</td>
+        <td>
+          <img src="${customer.salesAgentImg}" alt="${customer.salesAgentName}" class="avatar">
+          ${customer.salesAgentName}
+        </td>
+      </tr> `
+      )
+      .join("");
+
+    newCustomersPageDisplay.textContent = `Showing ${startIndex + 1}-${Math.min(
+      endIndex,
+      newCustomers.length
+    )} of ${newCustomers.length}`;
+
+    renderNewCustomersPagination(
+      Math.ceil(newCustomers.length / newCustomersPerPage),
+      currentNewCustomersPage
+    );
+  }
+
+  function renderNewCustomersPagination(totalPages, currentNewCustomersPage) {
+    let pagesHTML = "";
+
+    pagesHTML += `<span class="arrow ${
+      currentNewCustomersPage === 1 ? "disabled" : ""
+    }" data-page="${
+      currentNewCustomersPage - 1
+    }"> <i class="fa-solid fa-angles-left prev"></i></span>`;
+
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        pagesHTML += getNewCustomersPageHTML(i, currentNewCustomersPage);
+      }
+    } else {
+      pagesHTML += getNewCustomersPageHTML(1, currentNewCustomersPage);
+      pagesHTML += getNewCustomersPageHTML(2, currentNewCustomersPage);
+
+      if (currentNewCustomersPage > 4) {
+        pagesHTML += `<span class="dots">...</span>`;
+      }
+
+      if (
+        currentNewCustomersPage > 2 &&
+        currentNewCustomersPage < totalPages - 1
+      ) {
+        pagesHTML += getNewCustomersPageHTML(
+          currentNewCustomersPage,
+          currentNewCustomersPage
+        );
+      }
+
+      if (currentNewCustomersPage < totalPages - 3) {
+        pagesHTML += `<span class="dots">...</span>`;
+      }
+
+      pagesHTML += getNewCustomersPageHTML(
+        totalPages - 1,
+        currentNewCustomersPage
+      );
+      pagesHTML += getNewCustomersPageHTML(totalPages, currentNewCustomersPage);
+    }
+
+    pagesHTML += `<span class="arrow ${
+      currentNewCustomersPage === totalPages ? "disabled" : ""
+    }" data-page="${
+      currentNewCustomersPage + 1
+    }"> <i class="fa-solid fa-angles-right next"></i></span>`;
+
+    newCustomersPageContainer.innerHTML = pagesHTML;
+  }
+
+  function getNewCustomersPageHTML(page, currentNewCustomersPage) {
+    return `<span class="${
+      page === currentNewCustomersPage ? "active-page" : ""
+    }" data-page="${page}">${page}</span>`;
+  }
+
+  newCustomersPageContainer.addEventListener("click", (e) => {
+    const pageEl = e.target.closest("[data-page]");
+    if (!pageEl) return;
+
+    const targetPage = parseInt(pageEl.dataset.page);
+    const totalPages = Math.ceil(newCustomers.length / newCustomersPerPage);
+
+    if (!isNaN(targetPage) && targetPage >= 1 && targetPage <= totalPages) {
+      currentNewCustomersPage = targetPage;
+      renderNewCustomers();
+      document
+        .getElementById("new-customers")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  renderNewCustomers();
 });

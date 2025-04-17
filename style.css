@@ -1517,7 +1517,8 @@ p {
   }
 }
 
-.query-remark {
+.query-remark,
+.new-customers {
   background: #fff;
   width: 95%;
   padding-bottom: 10px;
@@ -1537,7 +1538,8 @@ p {
       font-size: 22px;
     }
   }
-  .queries-table {
+  .queries-table,
+  .new-customers-table {
     border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
@@ -1567,7 +1569,7 @@ p {
       color: #292d32;
       font-weight: 500;
 
-      .sales-agent-img {
+      .avatar {
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -1576,7 +1578,8 @@ p {
       }
     }
   }
-  .query-pagination {
+  .query-pagination,
+  .new-customers-pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1585,7 +1588,8 @@ p {
     color: #535759;
     font-size: 14px;
 
-    .query-pages {
+    .query-pages,
+    .new-customers-pages {
       display: flex;
       gap: 0px;
       align-items: center;
@@ -1616,6 +1620,17 @@ p {
       }
       .next {
         margin-left: 15px;
+      }
+    }
+  }
+}
+
+.new-customers {
+  .new-customers-table {
+    tr {
+      th:nth-child(1),
+      th:nth-child(2) {
+        width: 38%;
       }
     }
   }
