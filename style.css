@@ -684,12 +684,6 @@ p {
               border-radius: 3px;
               width: 100%;
             }
-            span {
-              white-space: nowrap;
-              color: #303030;
-              font-size: 16px;
-              font-weight: 700;
-            }
           }
 
           .unit {
@@ -817,43 +811,18 @@ p {
             font-size: 18px;
             font-weight: 700;
           }
-          .most-buying-lists {
-            display: flex;
-            align-items: center;
-            gap: 2px;
+
+          .view-detail-btn {
             margin-left: auto;
-            border: 1px solid #dcdcdc;
-            padding: 5px;
+            background: #587cec;
+            color: #fff;
+            padding: 7px 25px;
             border-radius: 5px;
-
-            label {
-              background: #c8eaff;
-              font-weight: 700;
-              color: #20313a;
-              font-size: 14px;
-              padding: 6px 9px;
-              border-radius: 3px;
-              margin-right: 7px;
-            }
-
-            span {
-              color: #303030;
-              font-weight: 600;
-              font-size: 15px;
-            }
-
-            .view-detail-btn {
-              background: #587cec;
-              color: #fff;
-              padding: 7px 15px;
-              border-radius: 5px;
-              outline: none;
-              border: none;
-              cursor: pointer;
-              font-family: "Inter", sans-serif;
-              font-size: 15px;
-              margin-left: 15px;
-            }
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
           }
         }
         .revenue-sales {
@@ -894,6 +863,8 @@ p {
               color: #303030;
               font-size: 16px;
               font-weight: 700;
+              font-size: 18px;
+              margin-right: 5px;
             }
           }
 
@@ -903,10 +874,6 @@ p {
 
           .sales {
             width: 30%;
-            span {
-              font-size: 18px;
-              margin-right: 5px;
-            }
           }
         }
       }
@@ -962,7 +929,6 @@ p {
   width: 95%;
   margin: 20px auto;
   display: flex;
-  align-items: flex-start;
   gap: 20px;
 
   .leads-graph-container {
@@ -1046,7 +1012,6 @@ p {
 
   .tradewise-distribution {
     width: 30%;
-    height: 100%;
     background: #fff;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;

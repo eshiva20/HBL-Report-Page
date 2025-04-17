@@ -414,12 +414,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="unit">
                 <p>Unit Sold- ${product.unitSold}</p>
                 <div class="border-line"></div>
-                <span>${product.unitCount} K</span>
               </div>
               <div class="revenue">
                 <p>Revenue- ${product.revenue}</p>
                 <div class="border-line"></div>
-                <span>${product.revenueCount} k</span>
               </div>
             </div>
           </div>
@@ -728,21 +726,12 @@ document.addEventListener("DOMContentLoaded", function () {
               <span>Customer Name</span>
               <p class="customer-name">${customer.customerName}</p>
             </div>
-            <div class="most-buying-lists">
-              <label>Most Buying</label>
-              <span>
-                ${customer.mostBuying.slice(0, 3).join(", ")}${
-          customer.mostBuying.length > 3 ? ", ..." : ""
-        }
-              </span>
-              <button class="view-detail-btn">View All</button>
-            </div>
+            <button class="view-detail-btn">View</button>
           </div>
           <div class="revenue-sales">
             <div class="revenue">
               <p>Revenue- ${customer.revenueAmt}</p>
               <div class="border-line"></div>
-              <span>${customer.revenueCount} k</span>
             </div>
             <div class="sales">
               <p>Sales Person</p>
