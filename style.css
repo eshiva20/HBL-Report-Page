@@ -1576,4 +1576,47 @@ p {
       }
     }
   }
+  .query-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #535759;
+    font-size: 14px;
+
+    .query-pages {
+      display: flex;
+      gap: 0px;
+      align-items: center;
+      span {
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+          color: #1b2124;
+        }
+      }
+      .active-page {
+        background: #587cec;
+        color: #fff;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+        &:hover {
+          color: #1b2124;
+        }
+      }
+      .prev {
+        margin-right: 15px;
+      }
+      .next {
+        margin-left: 15px;
+      }
+    }
+  }
 }

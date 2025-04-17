@@ -805,9 +805,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }" data-page="${page}">${page}</span>`;
   }
 
+  // pageContainer.addEventListener("click", (e) => {
+  //   if (e.target.dataset.page) {
+  //     currentPage = parseInt(e.target.dataset.page);
+  //     renderCustomers();
+  //     document
+  //       .getElementById("customers")
+  //       .scrollIntoView({ behavior: "smooth" });
+  //   }
+  // });
+
   pageContainer.addEventListener("click", (e) => {
-    if (e.target.dataset.page) {
-      currentPage = parseInt(e.target.dataset.page);
+    const pageEl = e.target.closest("[data-page]");
+    if (!pageEl) return;
+
+    const targetPage = parseInt(pageEl.dataset.page);
+    const totalPages = Math.ceil(allCustomers.length / customersPerPage);
+
+    if (!isNaN(targetPage) && targetPage >= 1 && targetPage <= totalPages) {
+      currentPage = targetPage;
       renderCustomers();
       document
         .getElementById("customers")
@@ -1261,13 +1277,169 @@ document.addEventListener("DOMContentLoaded", function () {
       customer: "Darrell Steward",
       orderValue: "11.70",
     },
+    {
+      number: "45904",
+      date: "Dec 29, 2012",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Dianne Russell",
+      customer: "Jacob Jones",
+      orderValue: "14.81",
+    },
+    {
+      number: "93457",
+      date: "Aug 7, 2017",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Cameron Williamson",
+      customer: "Robert Fox",
+      orderValue: "8.99",
+    },
+    {
+      number: "28200",
+      date: "Nov 28, 2015",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Jenny Wilson",
+      customer: "Esther Howard",
+      orderValue: "17.84",
+    },
+    {
+      number: "13671",
+      date: "Nov 7, 2017",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Courtney Henry",
+      customer: "Devon Lane",
+      orderValue: "11.70",
+    },
+    {
+      number: "50364",
+      date: "May 12, 2019",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Arlene McCoy",
+      customer: "Arlene McCoy",
+      orderValue: "6.48",
+    },
+    {
+      number: "10708",
+      date: "Oct 24, 2018",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Darrell Steward",
+      customer: "Jane Cooper",
+      orderValue: "8.99",
+    },
+    {
+      number: "74875",
+      date: "May 31, 2015",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Savannah Nguyen",
+      customer: "Courtney Henry",
+      orderValue: "5.22",
+    },
+    {
+      number: "23340",
+      date: "Jul 14, 2015",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Theresa Webb",
+      customer: "Darrell Steward",
+      orderValue: "11.70",
+    },
+    {
+      number: "45904",
+      date: "Dec 29, 2012",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Dianne Russell",
+      customer: "Jacob Jones",
+      orderValue: "14.81",
+    },
+    {
+      number: "93457",
+      date: "Aug 7, 2017",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Cameron Williamson",
+      customer: "Robert Fox",
+      orderValue: "8.99",
+    },
+    {
+      number: "28200",
+      date: "Nov 28, 2015",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Jenny Wilson",
+      customer: "Esther Howard",
+      orderValue: "17.84",
+    },
+    {
+      number: "13671",
+      date: "Nov 7, 2017",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Courtney Henry",
+      customer: "Devon Lane",
+      orderValue: "11.70",
+    },
+    {
+      number: "50364",
+      date: "May 12, 2019",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Arlene McCoy",
+      customer: "Arlene McCoy",
+      orderValue: "6.48",
+    },
+    {
+      number: "10708",
+      date: "Oct 24, 2018",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Darrell Steward",
+      customer: "Jane Cooper",
+      orderValue: "8.99",
+    },
+    {
+      number: "74875",
+      date: "May 31, 2015",
+      status: "Work in progress",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Savannah Nguyen",
+      customer: "Courtney Henry",
+      orderValue: "5.22",
+    },
+    {
+      number: "23340",
+      date: "Jul 14, 2015",
+      status: "Pending",
+      salesAgentImg: "./assets/sales-agent.png",
+      salesAgentName: "Theresa Webb",
+      customer: "Darrell Steward",
+      orderValue: "11.70",
+    },
   ];
 
   const allQueries = document.getElementById("all-queries");
+  const queryPaginationWrapper = document.querySelector(".query-pagination");
+  const queryPageDisplay = queryPaginationWrapper.querySelector("p");
+  const queryPageContainer =
+    queryPaginationWrapper.querySelector(".query-pages");
 
-  allQueries.innerHTML = queryRemarks
-    .map(
-      (query, id) => `
+  const queriesPerPage = 10;
+  let currentQueryPage = 1;
+
+  function renderQueries() {
+    const startIndex = (currentQueryPage - 1) * queriesPerPage;
+    const endIndex = startIndex + queriesPerPage;
+    const visibleQueries = queryRemarks.slice(startIndex, endIndex);
+
+    allQueries.innerHTML = visibleQueries
+      .map(
+        (query, id) => `
       <tr>
         <td>${query.number}</td>
         <td>${query.date}</td>
@@ -1279,6 +1451,93 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${query.customer}</td>
         <td>$${query.orderValue}</td>
       </tr> `
-    )
-    .join("");
+      )
+      .join("");
+
+    queryPageDisplay.textContent = `Showing ${startIndex + 1}-${Math.min(
+      endIndex,
+      queryRemarks.length
+    )} of ${queryRemarks.length}`;
+
+    renderQueryPagination(
+      Math.ceil(queryRemarks.length / queriesPerPage),
+      currentQueryPage
+    );
+  }
+
+  function renderQueryPagination(totalPages, currentQueryPage) {
+    let pagesHTML = "";
+
+    pagesHTML += `<span class="arrow ${
+      currentQueryPage === 1 ? "disabled" : ""
+    }" data-page="${
+      currentQueryPage - 1
+    }"> <i class="fa-solid fa-angles-left prev"></i></span>`;
+
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        pagesHTML += getQueryPageHTML(i, currentQueryPage);
+      }
+    } else {
+      pagesHTML += getQueryPageHTML(1, currentQueryPage);
+      pagesHTML += getQueryPageHTML(2, currentQueryPage);
+
+      if (currentQueryPage > 4) {
+        pagesHTML += `<span class="dots">...</span>`;
+      }
+
+      if (currentQueryPage > 2 && currentQueryPage < totalPages - 1) {
+        pagesHTML += getQueryPageHTML(currentQueryPage, currentQueryPage);
+      }
+
+      if (currentQueryPage < totalPages - 3) {
+        pagesHTML += `<span class="dots">...</span>`;
+      }
+
+      pagesHTML += getQueryPageHTML(totalPages - 1, currentQueryPage);
+      pagesHTML += getQueryPageHTML(totalPages, currentQueryPage);
+    }
+
+    pagesHTML += `<span class="arrow ${
+      currentQueryPage === totalPages ? "disabled" : ""
+    }" data-page="${
+      currentQueryPage + 1
+    }"> <i class="fa-solid fa-angles-right next"></i></span>`;
+
+    queryPageContainer.innerHTML = pagesHTML;
+  }
+
+  function getQueryPageHTML(page, currentQueryPage) {
+    return `<span class="${
+      page === currentQueryPage ? "active-page" : ""
+    }" data-page="${page}">${page}</span>`;
+  }
+
+  // queryPageContainer.addEventListener("click", (e) => {
+  //   if (e.target.dataset.page) {
+  //     currentQueryPage = parseInt(e.target.dataset.page);
+  //     renderQueries();
+  //     document
+  //       .getElementById("query-remark")
+  //       .scrollIntoView({ behavior: "smooth" });
+  //   }
+  // });
+
+  queryPageContainer.addEventListener("click", (e) => {
+    const pageEl = e.target.closest("[data-page]");
+    if (!pageEl) return;
+
+    const targetPage = parseInt(pageEl.dataset.page);
+    const totalPages = Math.ceil(queryRemarks.length / queriesPerPage);
+
+    if (!isNaN(targetPage) && targetPage >= 1 && targetPage <= totalPages) {
+      currentQueryPage = targetPage;
+      renderQueries();
+      document
+        .getElementById("query-remark")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  renderQueries();
 });
