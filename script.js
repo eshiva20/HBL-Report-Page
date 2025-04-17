@@ -1787,4 +1787,87 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   renderNewCustomers();
+
+  //top three sales performer
+
+  const topThreeSalesPerformer = [
+    {
+      img: "/assets/sales-agent.png",
+      name: "Robert Fox",
+      sales: "1200",
+      orders: "40",
+      newCustomersAdded: "10",
+      salesPercentage: "85",
+      ordersPercentage: "30",
+      newCustomersAddedPercentage: "40",
+    },
+    {
+      img: "/assets/sales-agent.png",
+      name: "Annette Black",
+      sales: "800",
+      orders: "40",
+      newCustomersAdded: "10",
+      salesPercentage: "70",
+      ordersPercentage: "30",
+      newCustomersAddedPercentage: "40",
+    },
+    {
+      img: "/assets/sales-agent.png",
+      name: "Jerome Bell",
+      sales: "600",
+      orders: "40",
+      newCustomersAdded: "10",
+      salesPercentage: "50",
+      ordersPercentage: "30",
+      newCustomersAddedPercentage: "40",
+    },
+  ];
+
+  const topThreePerformerList = document.getElementById("top-three-performer");
+  topThreePerformerList.innerHTML = topThreeSalesPerformer
+    .map(
+      (performer, id) => `<div class="performer">
+        <div class="performer-img-cover">
+            ${
+              id === 0
+                ? ` <img src="./assets/icons/stars.png" alt="Stars icon" class="stars-icon"/>`
+                : ""
+            }
+              <img src="${performer.img}" alt="${
+        performer.name
+      }" class="performer-img"/>
+              <span class="position">${id + 1}</span>
+        </div>
+        <div>
+          <p class="performer-name">${performer.name}</p>
+          <p class="performer-sales-amt">$${performer.sales}</p>
+        </div>
+        <div class="sales-orders-customers">
+          <div class="sales">
+            <label>Sales</label>
+            <div class="border-line">
+              <div style="width:${performer.salesPercentage}%"></div>
+            </div>
+            <span>$${performer.sales}</span>
+          </div>
+          <div class="orders">
+            <label>Orders</label>
+            <div class="border-line">
+              <div style="width:${performer.ordersPercentage}%"></div>
+            </div>
+            <span>${performer.orders}</span>
+          </div>
+          <div class="new-customers-added">
+            <label>New Cust. Added</label>
+            <div class="border-line">
+              <div style="width:${
+                performer.newCustomersAddedPercentage
+              }%"></div>
+            </div>
+            <span>${performer.newCustomersAdded}</span>
+          </div>    
+        </div>
+      </div>`
+    )
+    .join("");
 });

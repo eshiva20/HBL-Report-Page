@@ -1518,7 +1518,8 @@ p {
 }
 
 .query-remark,
-.new-customers {
+.new-customers,
+.top-sales-performer {
   background: #fff;
   width: 95%;
   padding-bottom: 10px;
@@ -1539,7 +1540,8 @@ p {
     }
   }
   .queries-table,
-  .new-customers-table {
+  .new-customers-table,
+  .top-three-performer {
     border-radius: 15px;
     margin: 10px 20px;
     border: 1px solid #b6b6b6;
@@ -1631,6 +1633,179 @@ p {
       th:nth-child(1),
       th:nth-child(2) {
         width: 38%;
+      }
+    }
+  }
+}
+
+.top-sales-performer {
+  .top-three-performer {
+    width: auto;
+    .performer {
+      border-bottom: 1px solid #eeeeee;
+      padding: 20px 0px;
+      text-align: start;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      /* justify-content: space-between; */
+
+      &:nth-child(1) {
+        .performer-img-cover {
+          .performer-img {
+            border: 6px solid #ffb200;
+          }
+          .position {
+            background: #ffb200;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .performer-img-cover {
+          .performer-img {
+            border: 6px solid #bebebe;
+          }
+          .position {
+            background: #bebebe;
+          }
+        }
+      }
+
+      &:nth-last-child(1) {
+        border: none;
+        .performer-img-cover {
+          .performer-img {
+            border: 6px solid #e27c41;
+          }
+          .position {
+            background: #e27c41;
+          }
+        }
+      }
+      .performer-img-cover {
+        position: relative;
+        width: fit-content;
+        padding: 0px 8px;
+        .stars-icon {
+          width: 22px;
+          height: auto;
+          position: absolute;
+          top: -10px;
+          left: -7px;
+        }
+        .performer-img {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+        }
+        .position {
+          position: absolute;
+          bottom: 2px;
+          right: 5px;
+          border-radius: 50%;
+          height: 33px;
+          width: 33px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-weight: 700;
+          box-shadow: 0px 3.9px 2.6px 0px #ffffff73 inset;
+        }
+      }
+      div {
+        text-align: center;
+        .performer-name {
+          font-size: 12px;
+          color: #000000;
+          font-weight: 600;
+          white-space: nowrap;
+        }
+        .performer-sales-amt {
+          font-size: 30px;
+          font-weight: 800;
+          color: #000000;
+          margin-top: 3px;
+        }
+      }
+      .sales-orders-customers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+
+        .sales,
+        .orders,
+        .new-customers-added {
+          width: 100%;
+          border: 1px solid #dcdcdc;
+          padding: 8px 10px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 15px;
+
+          label {
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #20313a;
+            font-weight: 600;
+            white-space: nowrap;
+          }
+          .border-line {
+            height: 14px;
+            width: 100%;
+            background: #eeeeee;
+            border-radius: 5px;
+            position: relative;
+            div {
+              position: absolute;
+              height: 100%;
+              border-radius: 5px;
+            }
+          }
+          span {
+            font-weight: 700;
+            color: #303030;
+            font-size: 18px;
+          }
+        }
+        .sales {
+          label {
+            background: #34c7591a;
+          }
+          .border-line {
+            div {
+              background: #34c759;
+            }
+          }
+        }
+
+        .orders {
+          label {
+            background: #ffcc001a;
+          }
+          .border-line {
+            div {
+              background: #ffcc00;
+            }
+          }
+        }
+
+        .new-customers-added {
+          label {
+            background: #ff3b301a;
+          }
+          .border-line {
+            div {
+              background: #ff3b30;
+            }
+          }
+        }
       }
     }
   }
