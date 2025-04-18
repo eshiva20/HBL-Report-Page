@@ -1,9 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Common Functions
+  // Constants
 
   function formatCurrency(amount) {
     return "₹" + amount.toLocaleString("en-IN");
   }
+
+  const reportBase = [
+    {
+      key: "contract",
+      reportName: "Contract Mfg.",
+      style: { color: "#1E508D", background: "#E6F1FF" },
+    },
+    {
+      key: "directGovt",
+      reportName: "Direct Govt. Inst.",
+      style: { color: "#FF3A6F", background: "#FFEBE3" },
+    },
+    {
+      key: "indirectGovt",
+      reportName: "Indirect Govt. Inst.",
+      style: { color: "#A7B817", background: "#FAFFCF" },
+    },
+    {
+      key: "pcd",
+      reportName: "PCD Sales",
+      style: { color: "#FF9504", background: "#FFEDD3" },
+    },
+    {
+      key: "ethical",
+      reportName: "Ethical Sales",
+      style: { color: "#F6D913", background: "#FFFCE7" },
+    },
+    {
+      key: "directExport",
+      reportName: "Direct Export",
+      style: { color: "#0BB1B7", background: "#D9FEFF" },
+    },
+    {
+      key: "deemedExport",
+      reportName: "Deemed Export",
+      style: { color: "#556179", background: "#E9E9E9" },
+    },
+  ];
 
   // Date Range Selector
   flatpickr("#datetime-picker", {
@@ -88,43 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Collection report Cards
-  const reportBase = [
-    {
-      key: "contract",
-      reportName: "Contract Mfg.",
-      style: { color: "#1E508D", background: "#E6F1FF" },
-    },
-    {
-      key: "directGovt",
-      reportName: "Direct Govt. Inst.",
-      style: { color: "#FF3A6F", background: "#FFEBE3" },
-    },
-    {
-      key: "indirectGovt",
-      reportName: "Indirect Govt. Inst.",
-      style: { color: "#A7B817", background: "#FAFFCF" },
-    },
-    {
-      key: "pcd",
-      reportName: "PCD Sales",
-      style: { color: "#FF9504", background: "#FFEDD3" },
-    },
-    {
-      key: "ethical",
-      reportName: "Ethical Sales",
-      style: { color: "#F6D913", background: "#FFFCE7" },
-    },
-    {
-      key: "directExport",
-      reportName: "Direct Export",
-      style: { color: "#0BB1B7", background: "#D9FEFF" },
-    },
-    {
-      key: "deemedExport",
-      reportName: "Deemed Export",
-      style: { color: "#556179", background: "#E9E9E9" },
-    },
-  ];
 
   const reportAmounts = {
     Yesterday: {
@@ -401,118 +402,141 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // products
 
-  const products = [
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-    {
-      productName: "Paracetamol",
-      unitSold: "5,000",
-      unitCount: "2436",
-      revenue: "2,50,000",
-      revenueCount: "2436",
-    },
-  ];
+  fetch("products_with_details.json")
+    .then((response) => response.json())
+    .then((products) => {
+      const allProductsList = document.getElementById("all-products");
+      const viewMoreBtn = document.querySelector(".view-more-products-btn");
+      let showAll = false;
+      let filteredProducts = products;
 
-  const allProductsList = document.getElementById("all-products");
-  const viewMoreBtn = document.querySelector(".view-more-products-btn");
+      const maxUnitSold = Math.max(...products.map((p) => p.unitSold));
+      const maxRevenue = Math.max(...products.map((p) => p.revenue));
 
-  let showAll = false;
+      function renderProducts() {
+        const visibleProducts = showAll
+          ? filteredProducts
+          : filteredProducts.slice(0, 5);
 
-  function renderProducts() {
-    const visibleProducts = showAll ? products : products.slice(0, 5);
-    allProductsList.innerHTML = visibleProducts
-      .map(
-        (product, id) => `<div ${
-          visibleProducts.length === id + 1 && "style=border:none"
-        } class="single-product">
-          <div class="rank">
-            <p>Rank</p>
-            <h1>${id + 1}</h1>
-          </div>
-          <div class="product">
-            <div class="product-detail">
-              <div>
-                <span>Product Name</span>
-                <p class="product-name">${product.productName}</p>
-              </div>
-              <button class="view-detail-btn">View Detail</button>
+        allProductsList.innerHTML = visibleProducts
+          .map(
+            (product, id) => `<div ${
+              visibleProducts.length === id + 1 ? 'style="border:none"' : ""
+            } class="single-product">
+            <div class="rank">
+              <p>Rank</p>
+              <h1>${id + 1}</h1>
             </div>
-            <div class="unit-revenue">
-              <div class="unit">
-                <p>Unit Sold- ${product.unitSold}</p>
-                <div class="border-line"></div>
+            <div class="product">
+              <div class="product-detail">
+                <div>
+                  <span>Product Name</span>
+                  <p class="product-name">${product.productName}</p>
+                </div>
+                <button class="view-detail-btn" data-index="${id}">View Detail</button>
               </div>
-              <div class="revenue">
-                <p>Revenue- ${product.revenue}</p>
-                <div class="border-line"></div>
+              <div class="unit-revenue">
+                <div class="unit">
+                  <p>Unit Sold - ${Number(product.unitSold).toLocaleString(
+                    "en-IN"
+                  )}</p>
+                  <div class="border-line">
+                    <div style="width:${
+                      (product.unitSold / maxUnitSold) * 100
+                    }%"></div>
+                  </div>
+                </div>
+                <div class="revenue">
+                  <p>Revenue - ${formatCurrency(product.revenue)}</p>
+                  <div class="border-line">
+                    <div style="width:${
+                      (product.revenue / maxRevenue) * 100
+                    }%"></div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>`
-      )
-      .join("");
+          </div>`
+          )
+          .join("");
 
-    viewMoreBtn.querySelector("p").textContent = showAll
-      ? "Show Less"
-      : "View More";
-    viewMoreBtn.querySelector("i").classList.toggle("fa-chevron-up", showAll);
-    viewMoreBtn
-      .querySelector("i")
-      .classList.toggle("fa-chevron-down", !showAll);
-  }
-  viewMoreBtn.addEventListener("click", () => {
-    showAll = !showAll;
-    renderProducts();
-  });
+        if (filteredProducts.length <= 5) {
+          viewMoreBtn.style.display = "none";
+        } else {
+          viewMoreBtn.style.display = "inline-block";
+        }
 
-  renderProducts();
+        viewMoreBtn.querySelector("p").textContent = showAll
+          ? "Show Less"
+          : "View More";
+        viewMoreBtn
+          .querySelector("i")
+          .classList.toggle("fa-chevron-up", showAll);
+        viewMoreBtn
+          .querySelector("i")
+          .classList.toggle("fa-chevron-down", !showAll);
+      }
+
+      viewMoreBtn.addEventListener("click", () => {
+        showAll = !showAll;
+        if (!showAll) {
+          document
+            .getElementById("products")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+        renderProducts();
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("view-detail-btn")) {
+          const index = e.target.dataset.index;
+          const product = filteredProducts[index];
+          const modal = document.querySelector(".modal");
+          const modalOverlay = document.querySelector(".modal-overlay");
+          const modalTitle = document.querySelector(".modal-title");
+          const modalTableBody = document.querySelector(".modal-table tbody");
+          modal.classList.add("products-details-modal");
+          modalTitle.innerHTML = `
+              <label>Product Name</label>
+              <h3>${product.productName}</h3>
+            `;
+          modalTableBody.innerHTML = product.details
+            .map(
+              (d) => `
+                <tr>
+                  <td>${d.orderNumber}</td>
+                  <td>${d.date}</td>
+                  <td>${Number(d.qty).toLocaleString("en-IN")}</td>
+                  <td>
+                    <img src="${d.salesAgentImg}" alt="${
+                d.salesAgentName
+              }" class="avatar">
+                    ${d.salesAgentName}
+                  </td>
+                  <td>${d.customerName}</td>
+                  <td>${formatCurrency(d.orderValue)}</td>
+                </tr>`
+            )
+            .join("");
+
+          modalOverlay.classList.remove("hidden");
+          document.body.classList.add("modal-open");
+        }
+
+        if (
+          e.target.classList.contains("modal-close") ||
+          e.target.classList.contains("modal-overlay")
+        ) {
+          document.querySelector(".modal-overlay").classList.add("hidden");
+          document.body.classList.remove("modal-open");
+        }
+      });
+
+      renderProducts();
+    })
+    .catch((error) => {
+      console.error("Error loading Products JSON:", error);
+    });
 
   // customers
 
@@ -991,7 +1015,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       ],
     },
-    options: (options = {
+    options: {
       responsive: true,
       plugins: {
         legend: { display: false },
@@ -1011,7 +1035,7 @@ document.addEventListener("DOMContentLoaded", function () {
           ticks: { display: false },
         },
       },
-    }),
+    },
   });
 
   // Order Operational Status

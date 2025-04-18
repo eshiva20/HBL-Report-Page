@@ -1,0 +1,626 @@
+[
+  {
+    "productName": "Paracetamol",
+    "unitSold": 5000,
+    "revenue": 250000,
+    "details": [
+      {
+        "orderNumber": "45901",
+        "date": "Jan 01, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45902",
+        "date": "Jan 02, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45903",
+        "date": "Jan 03, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45904",
+        "date": "Jan 04, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45905",
+        "date": "Jan 05, 2023",
+        "qty": 900,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 45000
+      }
+    ]
+  },
+  {
+    "productName": "Aspirin",
+    "unitSold": 4000,
+    "revenue": 200000,
+    "details": [
+      {
+        "orderNumber": "45906",
+        "date": "Jan 01, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Shiva Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45907",
+        "date": "Jan 02, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45908",
+        "date": "Jan 03, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45909",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45910",
+        "date": "Jan 05, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "productName": "Ibuprofen",
+    "unitSold": 3500,
+    "revenue": 175000,
+    "details": [
+      {
+        "orderNumber": "45911",
+        "date": "Jan 01, 2023",
+        "qty": 300,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 15000
+      },
+      {
+        "orderNumber": "45912",
+        "date": "Jan 02, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45913",
+        "date": "Jan 03, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45914",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45915",
+        "date": "Jan 05, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 30000
+      }
+    ]
+  },
+  {
+    "productName": "Cetirizine",
+    "unitSold": 3000,
+    "revenue": 150000,
+    "details": [
+      {
+        "orderNumber": "45916",
+        "date": "Jan 01, 2023",
+        "qty": 300,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 15000
+      },
+      {
+        "orderNumber": "45917",
+        "date": "Jan 02, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45918",
+        "date": "Jan 03, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45919",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45920",
+        "date": "Jan 05, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "productName": "Paracetamol",
+    "unitSold": 5000,
+    "revenue": 250000,
+    "details": [
+      {
+        "orderNumber": "45901",
+        "date": "Jan 01, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45902",
+        "date": "Jan 02, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45903",
+        "date": "Jan 03, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45904",
+        "date": "Jan 04, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45905",
+        "date": "Jan 05, 2023",
+        "qty": 900,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 45000
+      }
+    ]
+  },
+  {
+    "productName": "Aspirin",
+    "unitSold": 4000,
+    "revenue": 200000,
+    "details": [
+      {
+        "orderNumber": "45906",
+        "date": "Jan 01, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45907",
+        "date": "Jan 02, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45908",
+        "date": "Jan 03, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45909",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45910",
+        "date": "Jan 05, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "productName": "Ibuprofen",
+    "unitSold": 3500,
+    "revenue": 175000,
+    "details": [
+      {
+        "orderNumber": "45911",
+        "date": "Jan 01, 2023",
+        "qty": 300,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 15000
+      },
+      {
+        "orderNumber": "45912",
+        "date": "Jan 02, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45913",
+        "date": "Jan 03, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45914",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45915",
+        "date": "Jan 05, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 30000
+      }
+    ]
+  },
+  {
+    "productName": "Cetirizine",
+    "unitSold": 3000,
+    "revenue": 150000,
+    "details": [
+      {
+        "orderNumber": "45916",
+        "date": "Jan 01, 2023",
+        "qty": 300,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 15000
+      },
+      {
+        "orderNumber": "45917",
+        "date": "Jan 02, 202en, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45918",
+        "date": "Jan 03, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45919",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45920",
+        "date": "Jan 05, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "productName": "Paracetamol",
+    "unitSold": 5000,
+    "revenue": 250000,
+    "details": [
+      {
+        "orderNumber": "45901",
+        "date": "Jan 01, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45902",
+        "date": "Jan 02, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45903",
+        "date": "Jan 03, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45904",
+        "date": "Jan 04, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45905",
+        "date": "Jan 05, 2023",
+        "qty": 900,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 45000
+      }
+    ]
+  },
+  {
+    "productName": "Aspirin",
+    "unitSold": 4000,
+    "revenue": 200000,
+    "details": [
+      {
+        "orderNumber": "45906",
+        "date": "Jan 01, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45907",
+        "date": "Jan 02, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45908",
+        "date": "Jan 03, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45909",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45910",
+        "date": "Jan 05, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "productName": "Ibuprofen",
+    "unitSold": 3500,
+    "revenue": 175000,
+    "details": [
+      {
+        "orderNumber": "45911",
+        "date": "Jan 01, 2023",
+        "qty": 300,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 15000
+      },
+      {
+        "orderNumber": "45912",
+        "date": "Jan 02, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45913",
+        "date": "Jan 03, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45914",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45915",
+        "date": "Jan 05, 2023",
+        "qty": 600,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 30000
+      }
+    ]
+  },
+  {
+    "productName": "Cetirizine",
+    "unitSold": 3000,
+    "revenue": 150000,
+    "details": [
+      {
+        "orderNumber": "45916",
+        "date": "Jan 01, 2023",
+        "qty": 300,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Nina Simmons",
+        "customerName": "Jacob Jones",
+        "orderValue": 15000
+      },
+      {
+        "orderNumber": "45917",
+        "date": "Jan 02, 202en, 2023",
+        "qty": 400,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Courtney Henry",
+        "customerName": "Annette Black",
+        "orderValue": 20000
+      },
+      {
+        "orderNumber": "45918",
+        "date": "Jan 03, 2023",
+        "qty": 500,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Marvin McKinney",
+        "customerName": "Eleanor Pena",
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45919",
+        "date": "Jan 04, 2023",
+        "qty": 700,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Dianne Russell",
+        "customerName": "Cameron Williamson",
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45920",
+        "date": "Jan 05, 2023",
+        "qty": 800,
+        "salesAgentImg": "./assets/sales-agent.png",
+        "salesAgentName": "Theresa Webb",
+        "customerName": "Courtney Henry",
+        "orderValue": 40000
+      }
+    ]
+  }
+]

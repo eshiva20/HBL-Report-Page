@@ -177,7 +177,7 @@
       <div id="cards-container" class="cards-container"></div>
     </section>
 
-    <section class="products">
+    <section id="products" class="products">
       <div class="title-cover">
         <h1 class="title">Products</h1>
         <div class="searchbar">
@@ -196,7 +196,7 @@
       <div class="title-cover">
         <h1 class="title">Customers</h1>
         <div class="searchbar">
-          <input type="text" placeholder="Search..." />
+          <input id="products-searchbar" type="text" placeholder="Search..." />
           <img src="./assets/icons/lens.png" alt="Search" class="search-icon" />
         </div>
       </div>
@@ -319,8 +319,38 @@
       <div id="top-three-performer" class="top-three-performer"></div>
     </section>
 
+    <div class="modal-overlay hidden">
+      <div class="modal">
+        <div class="modal-header">
+          <div class="modal-title"></div>
+          <div class="searchbar">
+            <input type="text" placeholder="Search..." />
+            <img
+              src="./assets/icons/lens.png"
+              alt="Search"
+              class="search-icon"
+            />
+          </div>
+          <span class="modal-close">&times;</span>
+        </div>
+        <table class="modal-table">
+          <thead>
+            <tr>
+              <th>Order Number</th>
+              <th>Date</th>
+              <th>Quantity Purchased</th>
+              <th>Sales Agent</th>
+              <th>Customer</th>
+              <th>Order Value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
