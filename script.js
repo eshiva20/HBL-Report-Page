@@ -475,6 +475,22 @@ document.addEventListener("DOMContentLoaded", function () {
         viewMoreBtn
           .querySelector("i")
           .classList.toggle("fa-chevron-down", !showAll);
+
+        const input = document.getElementById("product-search");
+        input.addEventListener("input", function () {
+          const value = input.value.toLowerCase();
+
+          filteredProducts = products.filter((p) =>
+            p.productName.toLowerCase().includes(value)
+          );
+          if (filteredProducts.length === 0) {
+            allProductsList.innerHTML = "No Product Found";
+            viewMoreBtn.style.display = "none";
+          } else {
+            showAll = false;
+            renderProducts();
+          }
+        });
       }
 
       viewMoreBtn.addEventListener("click", () => {
