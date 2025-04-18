@@ -528,6 +528,16 @@ p {
         border-radius: 5px;
         height: 6px;
         width: 100%;
+        position: relative;
+
+        div {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          height: 6px;
+          border-radius: 5px;
+          width: 40%;
+        }
       }
       .amts {
         display: flex;

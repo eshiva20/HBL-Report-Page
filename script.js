@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Common Functions
+
+  function formatCurrency(amount) {
+    return "₹" + amount.toLocaleString("en-IN");
+  }
+
   // Date Range Selector
   flatpickr("#datetime-picker", {
     mode: "range",
@@ -122,31 +128,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const reportAmounts = {
     Yesterday: {
-      contract: "₹ 1,00,000",
-      directGovt: "₹ 1,50,000",
-      indirectGovt: "₹ 2,00,000",
-      pcd: "₹ 2,50,000",
-      ethical: "₹ 3,00,000",
-      directExport: "₹ 3,50,000",
-      deemedExport: "₹ 4,00,000",
+      contract: "100000",
+      directGovt: "150000",
+      indirectGovt: "200000",
+      pcd: "250000",
+      ethical: "300000",
+      directExport: "350000",
+      deemedExport: "400000",
     },
     Weekly: {
-      contract: "₹ 5,00,000",
-      directGovt: "₹ 5,50,000",
-      indirectGovt: "₹ 6,00,000",
-      pcd: "₹ 6,50,000",
-      ethical: "₹ 7,00,000",
-      directExport: "₹ 7,50,000",
-      deemedExport: "₹ 8,00,000",
+      contract: "500000",
+      directGovt: "550000",
+      indirectGovt: "600000",
+      pcd: "650000",
+      ethical: "700000",
+      directExport: "750000",
+      deemedExport: "800000",
     },
     Monthly: {
-      contract: "₹ 10,00,000",
-      directGovt: "₹ 11,00,000",
-      indirectGovt: "₹ 12,00,000",
-      pcd: "₹ 13,00,000",
-      ethical: "₹ 14,00,000",
-      directExport: "₹ 15,00,000",
-      deemedExport: "₹ 16,00,000",
+      contract: "1000000",
+      directGovt: "1100000",
+      indirectGovt: "200000",
+      pcd: "1300000",
+      ethical: "1400000",
+      directExport: "1500000",
+      deemedExport: "1600000",
     },
   };
 
@@ -156,9 +162,13 @@ document.addEventListener("DOMContentLoaded", function () {
       .map((report) => {
         const amount = reportAmounts[filter][report.key];
         return `
-          <div class="report-card" style="background-color: ${report.style.background}">
-            <p style="border-bottom: 2px solid ${report.style.color}">${report.reportName}</p>
-            <h2>${amount}</h2>
+          <div class="report-card" style="background-color: ${
+            report.style.background
+          }">
+            <p style="border-bottom: 2px solid ${report.style.color}">${
+          report.reportName
+        }</p>
+           <h2>${formatCurrency(Number(amount))}</h2>
           </div>`;
       })
       .join("");
@@ -280,89 +290,113 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Sales vs target
+
   const saleVsTarget = [
     {
       name: "Contract Mfg.",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "linear-gradient(179.23deg, #587CEC -16.04%, #82C7F2 99.33%);",
-        background: "#E6F1FF",
-      },
+      achieveAmt: "5200000",
+      targetAmt: "20000000",
     },
     {
       name: "Direct Govt. Inst.",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "linear-gradient(178.98deg, #FF4D50 -14.94%, #FFBCBD 127.73%);",
-        background: "#FFEBE3",
-      },
+      achieveAmt: "9000000",
+      targetAmt: "15000000",
     },
     {
       name: "Indirect Govt. Inst.",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "linear-gradient(179.33deg, #A8B346 -19.27%, #DEEF81 99.42%);",
-        background: "#FAFFCF",
-      },
+      achieveAmt: "7000000",
+      targetAmt: "10000000",
     },
     {
       name: "PCD Sales",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "linear-gradient(178.66deg, #F8C333 -36.3%, #DD932E 98.86%);",
-        background: "#FFEDD3",
-      },
+      achieveAmt: "15000000",
+      targetAmt: "25000000",
     },
     {
       name: "Ethical Sales",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "var(--Colors-Orange, #FF9500);",
-        background: "#FFFCE7",
-      },
+      achieveAmt: "20000000",
+      targetAmt: "30000000",
     },
     {
       name: "Direct Export",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "linear-gradient(178.76deg, #21C292 -17.83%, #1E9497 122.86%);",
-        background: "#D9FEFF",
-      },
+      achieveAmt: "8000000",
+      targetAmt: "15000000",
     },
     {
       name: "Deemed Export",
-      achieveAmt: "₹1,00,00,000",
-      targetAmt: "₹2,00,00,000",
-      style: {
-        color: "linear-gradient(179.52deg, #64728A -9.73%, #676A70 111.38%);",
-        background: "#E9E9E9",
-      },
+      achieveAmt: "6000000",
+      targetAmt: "10000000",
     },
   ];
 
+  function hexToRGBA(hex, alpha = 1) {
+    let r = 0,
+      g = 0,
+      b = 0;
+
+    // for 3-digit hex
+    if (hex.length === 4) {
+      r = parseInt(hex[1] + hex[1], 16);
+      g = parseInt(hex[2] + hex[2], 16);
+      b = parseInt(hex[3] + hex[3], 16);
+    }
+    // for 6-digit hex
+    else if (hex.length === 7) {
+      r = parseInt(hex[1] + hex[2], 16);
+      g = parseInt(hex[3] + hex[4], 16);
+      b = parseInt(hex[5] + hex[6], 16);
+    }
+
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
   const cardsContainer = document.getElementById("cards-container");
-  cardsContainer.innerHTML = saleVsTarget
-    .map(
-      (item) => `<div style="
-            background:${item.style.background}"  class="sales-vs-target-card">
-            <h4>${item?.name}</h4>
-            <div class="labels">
-              <span>Achieve</span>
-              <span>Target</span>
-            </div>
-            <div style="background: ${item.style.color}" class="border-line"></div>
-            <div class="amts">
-              <span>${item.achieveAmt}</span>
-              <span>${item.targetAmt}</span>
-            </div>
-            </div>`
-    )
+
+  function getTotalAmount(type) {
+    return saleVsTarget.reduce((acc, curr) => {
+      const amount = parseInt(curr[type]);
+      return acc + amount;
+    }, 0);
+  }
+
+  const overallTarget = document.querySelector("#over-all-target h3");
+  const overallAchieve = document.querySelector("#over-all-sale h3");
+  overallTarget.textContent = formatCurrency(getTotalAmount("targetAmt"));
+  overallAchieve.textContent = formatCurrency(getTotalAmount("achieveAmt"));
+
+  cardsContainer.innerHTML = reportBase
+    .map((item) => {
+      const matched = saleVsTarget.find(
+        (elem) => elem.name === item.reportName
+      );
+
+      const achieve = parseInt(matched.achieveAmt);
+      const target = parseInt(matched.targetAmt);
+      const percentage = Math.round((achieve / target) * 100);
+
+      return `
+      <div style="background:${
+        item.style.background
+      }" class="sales-vs-target-card">
+        <h4>${item?.reportName}</h4>
+        <div class="labels">
+          <span>Achieve</span>
+          <span>Target</span>
+        </div>
+        <div style="background: ${hexToRGBA(
+          item.style.color,
+          0.3
+        )}" class="border-line">
+          <div style="background: ${
+            item.style.color
+          }; width: ${percentage}%"></div>
+        </div>
+        <div class="amts">
+          <span>${formatCurrency(Number(matched.achieveAmt))}</span>
+          <span>${formatCurrency(Number(matched.targetAmt))}</span>
+        </div>
+      </div>`;
+    })
     .join("");
 
   // products
