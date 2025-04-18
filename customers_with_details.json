@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "customerName": "Sunpharma Pvt. Ltd.",
     "revenue": 250000,
     "salePersonName": "Manish Kumar",
@@ -35,6 +36,7 @@
     ]
   },
   {
+    "id": 2,
     "customerName": "Cipla Healthcare",
     "revenue": 180000,
     "salePersonName": "Pooja Sharma",
@@ -63,6 +65,7 @@
     ]
   },
   {
+    "id": 3,
     "customerName": "Zydus Cadila",
     "revenue": 150000,
     "salePersonName": "Ravi Mehta",
@@ -91,6 +94,7 @@
     ]
   },
   {
+    "id": 4,
     "customerName": "Glenmark Pharma",
     "revenue": 100000,
     "salePersonName": "Alok Verma",
@@ -119,6 +123,7 @@
     ]
   },
   {
+    "id": 5,
     "customerName": "Dr. Reddy's Labs",
     "revenue": 120000,
     "salePersonName": "Sneha Joshi",
@@ -147,6 +152,7 @@
     ]
   },
   {
+    "id": 6,
     "customerName": "Lupin Limited",
     "revenue": 90000,
     "salePersonName": "Rajesh Singh",
@@ -175,6 +181,7 @@
     ]
   },
   {
+    "id": 7,
     "customerName": "Torrent Pharmaceuticals",
     "revenue": 110000,
     "salePersonName": "Neha Agarwal",
@@ -203,6 +210,7 @@
     ]
   },
   {
+    "id": 8,
     "customerName": "Intas Biopharmaceuticals",
     "revenue": 135000,
     "salePersonName": "Ankit Patel",
@@ -231,6 +239,7 @@
     ]
   },
   {
+    "id": 9,
     "customerName": "Biocon",
     "revenue": 95000,
     "salePersonName": "Kavita Nair",
@@ -259,6 +268,7 @@
     ]
   },
   {
+    "id": 10,
     "customerName": "Alkem Laboratories",
     "revenue": 125000,
     "salePersonName": "Deepak Rana",
@@ -287,6 +297,7 @@
     ]
   },
   {
+    "id": 11,
     "customerName": "Aurobindo Pharma",
     "revenue": 105000,
     "salePersonName": "Shreya Mishra",

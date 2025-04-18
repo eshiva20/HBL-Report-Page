@@ -565,6 +565,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const customersPerPage = 10;
       let currentPage = 1;
 
+      const maxRevenue = Math.max(...allCustomers.map((p) => p.revenue));
+
       function renderCustomers() {
         const startIndex = (currentPage - 1) * customersPerPage;
         const endIndex = startIndex + customersPerPage;
@@ -586,12 +588,18 @@ document.addEventListener("DOMContentLoaded", function () {
                   <span>Customer Name</span>
                   <p class="customer-name">${customer.customerName}</p>
                 </div>
-                <button data-index="${idx}" class="view-customer-detail-btn">View</button>
+                <button data-index="${
+                  customer.id
+                }" class="view-customer-detail-btn">View</button>
               </div>
               <div class="revenue-sales">
                 <div class="revenue">
                   <p>Revenue- ${formatCurrency(customer.revenue)}</p>
-                  <div class="border-line"></div>
+                  <div class="border-line">
+                    <div style="width:${
+                      (customer.revenue / maxRevenue) * 100
+                    }%"></div>
+                  </div>
                 </div>
                 <div class="sales">
                   <p>Sales Person</p>
@@ -617,7 +625,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.addEventListener("click", function (e) {
         if (e.target.classList.contains("view-customer-detail-btn")) {
           const index = e.target.dataset.index;
-          const customer = allCustomers[index];
+          const customer = allCustomers[index - 1];
           const modal = document.querySelector(".modal");
           const modalOverlay = document.querySelector(".modal-overlay");
           const modalTitle = document.querySelector(".modal-title");

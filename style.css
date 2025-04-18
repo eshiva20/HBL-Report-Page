@@ -880,7 +880,16 @@ p {
               height: 10px;
               border-radius: 3px;
               width: 100%;
-              background: #ff9500;
+              background: rgb(255, 149, 0, 0.5);
+              position: relative;
+
+              div {
+                height: 10px;
+                position: absolute;
+                left: 0px;
+                border-radius: 3px;
+                background: #ff9500;
+              }
             }
             span {
               white-space: nowrap;
