@@ -830,9 +830,10 @@ p {
             color: #303030;
             font-size: 18px;
             font-weight: 700;
+            text-align: start;
           }
 
-          .view-detail-btn {
+          .view-customer-detail-btn {
             margin-left: auto;
             background: #587cec;
             color: #fff;
@@ -843,6 +844,9 @@ p {
             cursor: pointer;
             font-family: "Inter", sans-serif;
             font-size: 15px;
+            &:hover {
+              opacity: 0.95;
+            }
           }
         }
         .revenue-sales {

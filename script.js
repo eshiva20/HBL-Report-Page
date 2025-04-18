@@ -495,11 +495,25 @@ document.addEventListener("DOMContentLoaded", function () {
           const modalOverlay = document.querySelector(".modal-overlay");
           const modalTitle = document.querySelector(".modal-title");
           const modalTableBody = document.querySelector(".modal-table tbody");
+          const modalTableHead = document.querySelector(
+            ".modal-table thead tr"
+          );
           modal.classList.add("products-details-modal");
           modalTitle.innerHTML = `
               <label>Product Name</label>
               <h3>${product.productName}</h3>
             `;
+
+          modalTableHead.innerHTML = [
+            "Order Number",
+            "Date",
+            "Quantity Purchased",
+            "Sales Agent",
+            "Customer",
+            "Order Value",
+          ]
+            .map((h) => `<th>${h}</th>`)
+            .join("");
           modalTableBody.innerHTML = product.details
             .map(
               (d) => `
@@ -540,383 +554,189 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // customers
 
-  const allCustomers = [
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: [
-        "Paracetmol",
-        "Crocin",
-        "Product",
-        "Paracetmol",
-        "Crocin",
-        "Product",
-      ],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: [
-        "Paracetmol",
-        "Crocin",
-        "Product",
-        "Paracetmol",
-        "Crocin",
-        "Product",
-      ],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: [
-        "Paracetmol",
-        "Crocin",
-        "Product",
-        "Paracetmol",
-        "Crocin",
-        "Product",
-      ],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: [
-        "Paracetmol",
-        "Crocin",
-        "Product",
-        "Paracetmol",
-        "Crocin",
-        "Product",
-      ],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: [
-        "Paracetmol",
-        "Crocin",
-        "Product",
-        "Paracetmol",
-        "Crocin",
-        "Product",
-      ],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: [
-        "Paracetmol",
-        "Crocin",
-        "Product",
-        "Paracetmol",
-        "Crocin",
-        "Product",
-      ],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-    {
-      customerName: "Sunpharma pvt. ltd.",
-      revenueAmt: "2,50,000",
-      revenueCount: "2436",
-      mostBuying: ["Paracetmol", "Crocin", "Product"],
-      salePersonName: "Manish Kumar",
-    },
-  ];
+  fetch("customers_with_details.json")
+    .then((response) => response.json())
+    .then((allCustomers) => {
+      const allCustomersList = document.getElementById("all-customers");
+      const paginationWrapper = document.querySelector(".pagination");
+      const pageDisplay = paginationWrapper.querySelector("p");
+      const pageContainer = paginationWrapper.querySelector(".pages");
 
-  const allCustomersList = document.getElementById("all-customers");
-  const paginationWrapper = document.querySelector(".pagination");
-  const pageDisplay = paginationWrapper.querySelector("p");
-  const pageContainer = paginationWrapper.querySelector(".pages");
+      const customersPerPage = 10;
+      let currentPage = 1;
 
-  const customersPerPage = 10;
-  let currentPage = 1;
+      function renderCustomers() {
+        const startIndex = (currentPage - 1) * customersPerPage;
+        const endIndex = startIndex + customersPerPage;
+        const visibleCustomers = allCustomers.slice(startIndex, endIndex);
 
-  function renderCustomers() {
-    const startIndex = (currentPage - 1) * customersPerPage;
-    const endIndex = startIndex + customersPerPage;
-    const visibleCustomers = allCustomers.slice(startIndex, endIndex);
-
-    allCustomersList.innerHTML = visibleCustomers
-      .map(
-        (customer, idx) => `
-      <div ${
-        visibleCustomers.length === idx + 1 && "style=border:none"
-      } class="single-customer">
-        <div class="rank">
-          <p>Rank</p>
-          <h1>${startIndex + idx + 1}</h1>
-        </div>
-        <div class="customer">
-          <div class="customer-detail">
-            <div>
-              <span>Customer Name</span>
-              <p class="customer-name">${customer.customerName}</p>
+        allCustomersList.innerHTML = visibleCustomers
+          .map(
+            (customer, idx) => `
+          <div ${
+            visibleCustomers.length === idx + 1 && "style=border:none"
+          } class="single-customer">
+            <div class="rank">
+              <p>Rank</p>
+              <h1>${startIndex + idx + 1}</h1>
             </div>
-            <button class="view-detail-btn">View</button>
-          </div>
-          <div class="revenue-sales">
-            <div class="revenue">
-              <p>Revenue- ${customer.revenueAmt}</p>
-              <div class="border-line"></div>
+            <div class="customer">
+              <div class="customer-detail">
+                <div>
+                  <span>Customer Name</span>
+                  <p class="customer-name">${customer.customerName}</p>
+                </div>
+                <button data-index="${idx}" class="view-customer-detail-btn">View</button>
+              </div>
+              <div class="revenue-sales">
+                <div class="revenue">
+                  <p>Revenue- ${formatCurrency(customer.revenue)}</p>
+                  <div class="border-line"></div>
+                </div>
+                <div class="sales">
+                  <p>Sales Person</p>
+                  <span>${customer.salePersonName}</span>
+                </div>
+              </div>
             </div>
-            <div class="sales">
-              <p>Sales Person</p>
-              <span>${customer.salePersonName}</span>
-            </div>
-          </div>
-        </div>
-      </div>`
-      )
-      .join("");
+          </div>`
+          )
+          .join("");
 
-    pageDisplay.textContent = `Showing ${startIndex + 1}-${Math.min(
-      endIndex,
-      allCustomers.length
-    )} of ${allCustomers.length}`;
+        pageDisplay.textContent = `Showing ${startIndex + 1}-${Math.min(
+          endIndex,
+          allCustomers.length
+        )} of ${allCustomers.length}`;
 
-    renderPagination(
-      Math.ceil(allCustomers.length / customersPerPage),
-      currentPage
-    );
-  }
-
-  function renderPagination(totalPages, currentPage) {
-    let pagesHTML = "";
-
-    pagesHTML += `<span class="arrow ${
-      currentPage === 1 ? "disabled" : ""
-    }" data-page="${
-      currentPage - 1
-    }"> <i class="fa-solid fa-angles-left prev"></i></span>`;
-
-    if (totalPages <= 5) {
-      for (let i = 1; i <= totalPages; i++) {
-        pagesHTML += getPageHTML(i, currentPage);
-      }
-    } else {
-      pagesHTML += getPageHTML(1, currentPage);
-      pagesHTML += getPageHTML(2, currentPage);
-
-      if (currentPage > 4) {
-        pagesHTML += `<span class="dots">...</span>`;
+        renderPagination(
+          Math.ceil(allCustomers.length / customersPerPage),
+          currentPage
+        );
       }
 
-      if (currentPage > 2 && currentPage < totalPages - 1) {
-        pagesHTML += getPageHTML(currentPage, currentPage);
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("view-customer-detail-btn")) {
+          const index = e.target.dataset.index;
+          const customer = allCustomers[index];
+          const modal = document.querySelector(".modal");
+          const modalOverlay = document.querySelector(".modal-overlay");
+          const modalTitle = document.querySelector(".modal-title");
+          const modalTableBody = document.querySelector(".modal-table tbody");
+          const modalTableHead = document.querySelector(
+            ".modal-table thead tr"
+          );
+
+          modal.classList.add("products-details-modal");
+          modalTitle.innerHTML = `
+              <label>Customer Name</label>
+              <h3>${customer.customerName}</h3>
+            `;
+
+          modalTableHead.innerHTML = [
+            "Order Number",
+            "Date",
+            "Product Name",
+            "Product Quantity",
+            "Order Value",
+          ]
+            .map((h) => `<th>${h}</th>`)
+            .join("");
+
+          modalTableBody.innerHTML = customer.details
+            .map(
+              (d) => `
+                <tr>
+                  <td>${d.orderNumber}</td>
+                  <td>${d.date}</td>
+                  <td>${d.productName}</td>
+                  <td>${d.productQty}</td>
+                  <td>${formatCurrency(d.orderValue)}</td>
+                </tr>`
+            )
+            .join("");
+
+          modalOverlay.classList.remove("hidden");
+          document.body.classList.add("modal-open");
+        }
+
+        if (
+          e.target.classList.contains("modal-close") ||
+          e.target.classList.contains("modal-overlay")
+        ) {
+          document.querySelector(".modal-overlay").classList.add("hidden");
+          document.body.classList.remove("modal-open");
+        }
+      });
+
+      function renderPagination(totalPages, currentPage) {
+        let pagesHTML = "";
+
+        pagesHTML += `<span class="arrow ${
+          currentPage === 1 ? "disabled" : ""
+        }" data-page="${
+          currentPage - 1
+        }"> <i class="fa-solid fa-angles-left prev"></i></span>`;
+
+        if (totalPages <= 5) {
+          for (let i = 1; i <= totalPages; i++) {
+            pagesHTML += getPageHTML(i, currentPage);
+          }
+        } else {
+          pagesHTML += getPageHTML(1, currentPage);
+          pagesHTML += getPageHTML(2, currentPage);
+
+          if (currentPage > 4) {
+            pagesHTML += `<span class="dots">...</span>`;
+          }
+
+          if (currentPage > 2 && currentPage < totalPages - 1) {
+            pagesHTML += getPageHTML(currentPage, currentPage);
+          }
+
+          if (currentPage < totalPages - 3) {
+            pagesHTML += `<span class="dots">...</span>`;
+          }
+
+          pagesHTML += getPageHTML(totalPages - 1, currentPage);
+          pagesHTML += getPageHTML(totalPages, currentPage);
+        }
+
+        pagesHTML += `<span class="arrow ${
+          currentPage === totalPages ? "disabled" : ""
+        }" data-page="${
+          currentPage + 1
+        }"> <i class="fa-solid fa-angles-right next"></i></span>`;
+
+        pageContainer.innerHTML = pagesHTML;
       }
 
-      if (currentPage < totalPages - 3) {
-        pagesHTML += `<span class="dots">...</span>`;
+      function getPageHTML(page, currentPage) {
+        return `<span class="${
+          page === currentPage ? "active-page" : ""
+        }" data-page="${page}">${page}</span>`;
       }
 
-      pagesHTML += getPageHTML(totalPages - 1, currentPage);
-      pagesHTML += getPageHTML(totalPages, currentPage);
-    }
+      pageContainer.addEventListener("click", (e) => {
+        const pageEl = e.target.closest("[data-page]");
+        if (!pageEl) return;
 
-    pagesHTML += `<span class="arrow ${
-      currentPage === totalPages ? "disabled" : ""
-    }" data-page="${
-      currentPage + 1
-    }"> <i class="fa-solid fa-angles-right next"></i></span>`;
+        const targetPage = parseInt(pageEl.dataset.page);
+        const totalPages = Math.ceil(allCustomers.length / customersPerPage);
 
-    pageContainer.innerHTML = pagesHTML;
-  }
+        if (!isNaN(targetPage) && targetPage >= 1 && targetPage <= totalPages) {
+          currentPage = targetPage;
+          renderCustomers();
+          document
+            .getElementById("customers")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+      });
 
-  function getPageHTML(page, currentPage) {
-    return `<span class="${
-      page === currentPage ? "active-page" : ""
-    }" data-page="${page}">${page}</span>`;
-  }
-
-  pageContainer.addEventListener("click", (e) => {
-    const pageEl = e.target.closest("[data-page]");
-    if (!pageEl) return;
-
-    const targetPage = parseInt(pageEl.dataset.page);
-    const totalPages = Math.ceil(allCustomers.length / customersPerPage);
-
-    if (!isNaN(targetPage) && targetPage >= 1 && targetPage <= totalPages) {
-      currentPage = targetPage;
       renderCustomers();
-      document
-        .getElementById("customers")
-        .scrollIntoView({ behavior: "smooth" });
-    }
-  });
-
-  renderCustomers();
+    })
+    .catch((error) => {
+      console.error("Error loading Products JSON:", error);
+    });
 
   //Leads Graph
 

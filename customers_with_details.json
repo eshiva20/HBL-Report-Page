@@ -1,0 +1,317 @@
+[
+  {
+    "customerName": "Sunpharma Pvt. Ltd.",
+    "revenue": 250000,
+    "salePersonName": "Manish Kumar",
+    "details": [
+      {
+        "orderNumber": "45901",
+        "date": "Jan 01, 2023",
+        "productName": "Paracetamol",
+        "productQty": 500,
+        "orderValue": 50000
+      },
+      {
+        "orderNumber": "45902",
+        "date": "Jan 05, 2023",
+        "productName": "Ibuprofen",
+        "productQty": 600,
+        "orderValue": 70000
+      },
+      {
+        "orderNumber": "45903",
+        "date": "Jan 10, 2023",
+        "productName": "Amoxicillin",
+        "productQty": 400,
+        "orderValue": 60000
+      },
+      {
+        "orderNumber": "45904",
+        "date": "Jan 15, 2023",
+        "productName": "Azithromycin",
+        "productQty": 300,
+        "orderValue": 70000
+      }
+    ]
+  },
+  {
+    "customerName": "Cipla Healthcare",
+    "revenue": 180000,
+    "salePersonName": "Pooja Sharma",
+    "details": [
+      {
+        "orderNumber": "45905",
+        "date": "Feb 01, 2023",
+        "productName": "Cetirizine",
+        "productQty": 400,
+        "orderValue": 60000
+      },
+      {
+        "orderNumber": "45906",
+        "date": "Feb 07, 2023",
+        "productName": "Dolo 650",
+        "productQty": 300,
+        "orderValue": 60000
+      },
+      {
+        "orderNumber": "45907",
+        "date": "Feb 14, 2023",
+        "productName": "Allegra",
+        "productQty": 350,
+        "orderValue": 60000
+      }
+    ]
+  },
+  {
+    "customerName": "Zydus Cadila",
+    "revenue": 150000,
+    "salePersonName": "Ravi Mehta",
+    "details": [
+      {
+        "orderNumber": "45908",
+        "date": "Mar 02, 2023",
+        "productName": "Ranitidine",
+        "productQty": 200,
+        "orderValue": 50000
+      },
+      {
+        "orderNumber": "45909",
+        "date": "Mar 05, 2023",
+        "productName": "Pantoprazole",
+        "productQty": 300,
+        "orderValue": 50000
+      },
+      {
+        "orderNumber": "45910",
+        "date": "Mar 10, 2023",
+        "productName": "Domperidone",
+        "productQty": 250,
+        "orderValue": 50000
+      }
+    ]
+  },
+  {
+    "customerName": "Glenmark Pharma",
+    "revenue": 100000,
+    "salePersonName": "Alok Verma",
+    "details": [
+      {
+        "orderNumber": "45911",
+        "date": "Apr 03, 2023",
+        "productName": "Ibuprofen",
+        "productQty": 200,
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45912",
+        "date": "Apr 06, 2023",
+        "productName": "Metformin",
+        "productQty": 150,
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45913",
+        "date": "Apr 10, 2023",
+        "productName": "Amlodipine",
+        "productQty": 100,
+        "orderValue": 30000
+      }
+    ]
+  },
+  {
+    "customerName": "Dr. Reddy's Labs",
+    "revenue": 120000,
+    "salePersonName": "Sneha Joshi",
+    "details": [
+      {
+        "orderNumber": "45914",
+        "date": "May 01, 2023",
+        "productName": "Amoxicillin",
+        "productQty": 300,
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45915",
+        "date": "May 03, 2023",
+        "productName": "Azithromycin",
+        "productQty": 350,
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45916",
+        "date": "May 07, 2023",
+        "productName": "Paracetamol",
+        "productQty": 250,
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "customerName": "Lupin Limited",
+    "revenue": 90000,
+    "salePersonName": "Rajesh Singh",
+    "details": [
+      {
+        "orderNumber": "45917",
+        "date": "Jun 01, 2023",
+        "productName": "Losartan",
+        "productQty": 150,
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45918",
+        "date": "Jun 05, 2023",
+        "productName": "Hydrochlorothiazide",
+        "productQty": 200,
+        "orderValue": 30000
+      },
+      {
+        "orderNumber": "45919",
+        "date": "Jun 09, 2023",
+        "productName": "Metformin",
+        "productQty": 200,
+        "orderValue": 30000
+      }
+    ]
+  },
+  {
+    "customerName": "Torrent Pharmaceuticals",
+    "revenue": 110000,
+    "salePersonName": "Neha Agarwal",
+    "details": [
+      {
+        "orderNumber": "45920",
+        "date": "Jul 02, 2023",
+        "productName": "Cetirizine",
+        "productQty": 150,
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45921",
+        "date": "Jul 06, 2023",
+        "productName": "Ibuprofen",
+        "productQty": 250,
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45922",
+        "date": "Jul 10, 2023",
+        "productName": "Paracetamol",
+        "productQty": 300,
+        "orderValue": 30000
+      }
+    ]
+  },
+  {
+    "customerName": "Intas Biopharmaceuticals",
+    "revenue": 135000,
+    "salePersonName": "Ankit Patel",
+    "details": [
+      {
+        "orderNumber": "45923",
+        "date": "Aug 01, 2023",
+        "productName": "Amoxicillin",
+        "productQty": 250,
+        "orderValue": 45000
+      },
+      {
+        "orderNumber": "45924",
+        "date": "Aug 04, 2023",
+        "productName": "Ciprofloxacin",
+        "productQty": 300,
+        "orderValue": 45000
+      },
+      {
+        "orderNumber": "45925",
+        "date": "Aug 09, 2023",
+        "productName": "Amlodipine",
+        "productQty": 280,
+        "orderValue": 45000
+      }
+    ]
+  },
+  {
+    "customerName": "Biocon",
+    "revenue": 95000,
+    "salePersonName": "Kavita Nair",
+    "details": [
+      {
+        "orderNumber": "45926",
+        "date": "Sep 01, 2023",
+        "productName": "Dolo 650",
+        "productQty": 220,
+        "orderValue": 25000
+      },
+      {
+        "orderNumber": "45927",
+        "date": "Sep 03, 2023",
+        "productName": "Metformin",
+        "productQty": 230,
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45928",
+        "date": "Sep 06, 2023",
+        "productName": "Losartan",
+        "productQty": 200,
+        "orderValue": 35000
+      }
+    ]
+  },
+  {
+    "customerName": "Alkem Laboratories",
+    "revenue": 125000,
+    "salePersonName": "Deepak Rana",
+    "details": [
+      {
+        "orderNumber": "45929",
+        "date": "Oct 01, 2023",
+        "productName": "Azithromycin",
+        "productQty": 280,
+        "orderValue": 40000
+      },
+      {
+        "orderNumber": "45930",
+        "date": "Oct 05, 2023",
+        "productName": "Pantoprazole",
+        "productQty": 350,
+        "orderValue": 45000
+      },
+      {
+        "orderNumber": "45931",
+        "date": "Oct 10, 2023",
+        "productName": "Ranitidine",
+        "productQty": 200,
+        "orderValue": 40000
+      }
+    ]
+  },
+  {
+    "customerName": "Aurobindo Pharma",
+    "revenue": 105000,
+    "salePersonName": "Shreya Mishra",
+    "details": [
+      {
+        "orderNumber": "45932",
+        "date": "Nov 01, 2023",
+        "productName": "Paracetamol",
+        "productQty": 250,
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45933",
+        "date": "Nov 05, 2023",
+        "productName": "Dolo 650",
+        "productQty": 300,
+        "orderValue": 35000
+      },
+      {
+        "orderNumber": "45934",
+        "date": "Nov 10, 2023",
+        "productName": "Domperidone",
+        "productQty": 220,
+        "orderValue": 35000
+      }
+    ]
+  }
+]
