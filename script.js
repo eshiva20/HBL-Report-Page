@@ -580,63 +580,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const customersPerPage = 10;
       let currentPage = 1;
+      let filteredCustomers = [];
 
       const maxRevenue = Math.max(...allCustomers.map((p) => p.revenue));
 
       function renderCustomers() {
+        const input = document.getElementById("customer-search");
+        const value = input.value.toLowerCase();
+
+        const listToRender =
+          filteredCustomers.length > 0 || value
+            ? filteredCustomers
+            : allCustomers;
+
+        const totalPages = Math.ceil(listToRender.length / customersPerPage);
+
+        // FIX: Reset currentPage if it's too high (e.g. after filtering)
+        if (currentPage > totalPages) {
+          currentPage = 1;
+        }
+
         const startIndex = (currentPage - 1) * customersPerPage;
         const endIndex = startIndex + customersPerPage;
-        const visibleCustomers = allCustomers.slice(startIndex, endIndex);
+
+        const visibleCustomers = listToRender.slice(startIndex, endIndex);
+
+        if (visibleCustomers.length === 0) {
+          allCustomersList.innerHTML = "<p>No customers found.</p>";
+          pageDisplay.textContent = "";
+          pageContainer.innerHTML = "";
+          return;
+        }
 
         allCustomersList.innerHTML = visibleCustomers
           .map(
             (customer, idx) => `
-          <div ${
-            visibleCustomers.length === idx + 1 && "style=border:none"
-          } class="single-customer">
-            <div class="rank">
-              <p>Rank</p>
-              <h1>${startIndex + idx + 1}</h1>
-            </div>
-            <div class="customer">
-              <div class="customer-detail">
-                <div>
-                  <span>Customer Name</span>
-                  <p class="customer-name">${customer.customerName}</p>
+              <div ${
+                visibleCustomers.length === idx + 1 && "style=border:none"
+              } class="single-customer">
+                <div class="rank">
+                  <p>Rank</p>
+                  <h1>${startIndex + idx + 1}</h1>
                 </div>
-                <button data-index="${
-                  customer.id
-                }" class="view-customer-detail-btn">View</button>
-              </div>
-              <div class="revenue-sales">
-                <div class="revenue">
-                  <p>Revenue- ${formatCurrency(customer.revenue)}</p>
-                  <div class="border-line">
-                    <div style="width:${
-                      (customer.revenue / maxRevenue) * 100
-                    }%"></div>
+                <div class="customer">
+                  <div class="customer-detail">
+                    <div>
+                      <span>Customer Name</span>
+                      <p class="customer-name">${customer.customerName}</p>
+                    </div>
+                    <button data-index="${
+                      customer.id
+                    }" class="view-customer-detail-btn">View</button>
+                  </div>
+                  <div class="revenue-sales">
+                    <div class="revenue">
+                      <p>Revenue- ${formatCurrency(customer.revenue)}</p>
+                      <div class="border-line">
+                        <div style="width:${
+                          (customer.revenue / maxRevenue) * 100
+                        }%"></div>
+                      </div>
+                    </div>
+                    <div class="sales">
+                      <p>Sales Person</p>
+                      <span>${customer.salePersonName}</span>
+                    </div>
                   </div>
                 </div>
-                <div class="sales">
-                  <p>Sales Person</p>
-                  <span>${customer.salePersonName}</span>
-                </div>
-              </div>
-            </div>
-          </div>`
+              </div>`
           )
           .join("");
 
         pageDisplay.textContent = `Showing ${startIndex + 1}-${Math.min(
           endIndex,
-          allCustomers.length
-        )} of ${allCustomers.length}`;
+          listToRender.length
+        )} of ${listToRender.length}`;
 
-        renderPagination(
-          Math.ceil(allCustomers.length / customersPerPage),
-          currentPage
-        );
+        renderPagination(totalPages, currentPage);
       }
+
+      const input = document.getElementById("customer-search");
+      input.addEventListener("input", function () {
+        const value = input.value.toLowerCase();
+
+        filteredCustomers = allCustomers.filter((p) =>
+          p.customerName.toLowerCase().includes(value)
+        );
+
+        currentPage = 1;
+        renderCustomers();
+      });
 
       document.addEventListener("click", function (e) {
         if (e.target.classList.contains("view-customer-detail-btn")) {
